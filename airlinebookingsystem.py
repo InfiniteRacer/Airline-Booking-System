@@ -310,6 +310,53 @@ def mainmenuchoices():
         mainmenuchoices()
         
 #==============================================================================================
+
+#Main Menu USER VERSION
+
+#==============================================================================================
+        
+def mainmenuuser():
+    
+    print("Main Menu:")
+    
+    print("Enter '1' To View Flights Available")
+    print("Enter '2' To Search Flights")
+    print("Enter '3' To Change Portal Type (Staff/User)")
+    print("Enter '4' To Quit")
+    
+    print("")
+    
+    mainmenuuserchoices()
+    
+def mainmenuuserchoices():
+    
+    menuchoice=input("Enter option here: ")
+    print("")
+    
+    if menuchoice == '1':
+        
+        availflights()
+        
+    elif menuchoice == '2':
+        
+        searchflights()
+        
+    elif menuchoice == '3':
+        
+        mainmenuchoice()
+        
+    elif menuchoice == '4':
+        
+        quitsec()
+        
+    else:
+        
+        print("Invalid Input! Please try again...")
+        print("")
+        
+        mainmenuuserchoices()
+        
+#==============================================================================================
         
 #Sections Start Here
         
@@ -1122,16 +1169,71 @@ def saveflight():
         
 def viewsaveslot():
     
-    print(flight1)
-    print(flight2)
-    print(flight3)
+    print("Flight Slot 1: " +flight1)
+    print("Flight Slot 2: " +flight2)
+    print("Flight Slot 3: " +flight3)
     
     print("")
     mainmenu()
     
-def mainmenuuser():
+def availflights():
     
-    print("Main Menu:")
-    print("Enter '1' to ...")
+    print("Current Available Flights:")
+    print("")
+    
+    print("-----------------------------------------------------------")
+    print("")
+    
+    print("FROM:")
+    print(flight1uk+ " (" +flight1ukcode+ ")")
+    print("TO:")
+    print(flight1os+ " (" +flight1oscode+ ")")
+    print("")
+    print("Plane Model - " +flight1planechoice)
+    print("")
+    print("Economy Class - Starting at: £" +flight1standard)
+    print("First Class - Starting at: £" +flight1first)
+    
+    print("")
+    print("-----------------------------------------------------------")
+    print("")
+    
+    print("FROM:")
+    print(flight2uk+ " (" +flight2ukcode+ ")")
+    print("TO:")
+    print(flight2os+ " (" +flight2oscode+ ")")
+    print("")
+    print("Plane Model - " +flight2planechoice)
+    print("")
+    print("Economy Class - Starting at: £" +flight2standard)
+    print("First Class - Starting at: £" +flight2first)
+    
+    print("")
+    print("-----------------------------------------------------------")
+    print("")
+    
+    print("FROM:")
+    print(flight3uk+ " (" +flight3ukcode+ ")")
+    print("TO:")
+    print(flight3os+ " (" +flight3oscode+ ")")
+    print("")
+    print("Plane Model - " +flight3planechoice)
+    print("")
+    print("Economy Class - Starting at: £" +flight3standard)
+    print("First Class - Starting at: £" +flight3first)
+    
+    print("")
+    print("-----------------------------------------------------------")
+    print("")
+    
+    viewflightscheckpoint=input("Enter anything to continue: ")
+    print("")
+    
+    mainmenuuser()
+
+def searchflights():
+    
+    print("Feature Coming Soon!")
+    mainmenuuser()
     
 start()
