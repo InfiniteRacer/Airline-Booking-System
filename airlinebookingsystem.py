@@ -128,105 +128,130 @@ global flight1
 flight1 = 'No Flight Scheduled.'
 #====================
 global flight1uk
-flight1uk = ''
+flight1uk = 'N/A'
+#====================
+global flight1ukcode
+flight1ukcode = 'N/A'
 #====================
 global flight1os
-flight1os = ''
+flight1os = 'N/A'
 #====================
-global flight1standard
-flight1standard = ''
-#====================
-global flight1first
-flight1first = ''
+global flight1oscode
+flight1oscode = 'N/A'
 #====================
 global flight1planechoice
-flight1planechoice = ''
+flight1planechoice = 'N/A'
+#====================
+global flight1standard
+flight1standard = 'N/A'
+#====================
+global flight1first
+flight1first = 'N/A'
 #====================
 global flight2
-flight1 = 'No Flight Scheduled.'
+flight2 = 'No Flight Scheduled.'
 #====================
 global flight2uk
-flight1uk = ''
+flight2uk = 'N/A'
+#====================
+global flight2ukcode
+flight2ukcode = 'N/A'
 #====================
 global flight2os
-flight1os = ''
+flight2os = 'N/A'
 #====================
-global flight2standard
-flight1standard = ''
-#====================
-global flight2first
-flight1first = ''
+global flight2oscode
+flight2oscode = 'N/A'
 #====================
 global flight2planechoice
-flight1planechoice = ''
+flight2planechoice = 'N/A'
+#====================
+global flight2standard
+flight2standard = 'N/A'
+#====================
+global flight2first
+flight2first = 'N/A'
 #====================
 global flight3
-flight1 = 'No Flight Scheduled.'
+flight3 = 'No Flight Scheduled.'
 #====================
 global flight3uk
-flight1uk = ''
+flight3uk = 'N/A'
+#====================
+global flight3ukcode
+flight3ukcode = 'N/A'
 #====================
 global flight3os
-flight1os = ''
+flight3os = 'N/A'
 #====================
-global flight3standard
-flight1standard = ''
-#====================
-global flight3first
-flight1first = ''
+global flight3oscode
+flight3oscode = 'N/A'
 #====================
 global flight3planechoice
-flight1planechoice = ''
+flight3planechoice = 'N/A'
 #====================
-global flight4
-flight1 = 'No Flight Scheduled.'
+global flight3standard
+flight3standard = 'N/A'
 #====================
-global flight4uk
-flight1uk = ''
-#====================
-global flight4os
-flight1os = ''
-#====================
-global flight4standard
-flight1standard = ''
-#====================
-global flight4first
-flight1first = ''
-#====================
-global flight4planechoice
-flight1planechoice = ''
-#====================
-global flight5
-flight1 = 'No Flight Scheduled.'
-#====================
-global flight5uk
-flight1uk = ''
-#====================
-global flight5os
-flight1os = ''
-#====================
-global flight5standard
-flight1standard = ''
-#====================
-global flight5first
-flight1first = ''
-#====================
-global flight5planechoice
-flight1planechoice = ''
+global flight3first
+flight3first = 'N/A'
 
 #==============================================================================================
 
-#Main Menu / Start
+#FIRST Start (ALL)
 
 #==============================================================================================
 
 def start():
     
+    global mainmenuchoice
+    
+    def mainmenuchoice():
+        
+        print("Enter '1' to go to the Airline Portal")
+        print("Enter '2' to go to the Customer Portal")
+        print("Enter '3' to Quit")
+        
+        print("")
+        
+        menuchoice=input("Enter option here: ")
+        
+        print("")
+        
+        if menuchoice == '1':
+            
+            mainmenu()
+            
+        elif menuchoice == '2':
+            
+            mainmenuuser()
+            
+        elif menuchoice == '3':
+            
+            print("Program has ended! Your data has also been cleared automatically.")
+            
+            exit()
+            
+        else:
+            
+            print("Invalid Input. Please try again...")
+            print("")
+            mainmenuchoice()
+            
+    print("Airline Profit & Booking Program - Created by Samuel Powsney")
+    print("")
+    
     print("First Time Instructions:")
     print("Please select an option below. Type the number and press enter.")
     print("")
     
-    mainmenu()
+    mainmenuchoice()
+    
+#==============================================================================================
+
+#Main Menu STAFF VERSION
+
+#==============================================================================================
     
 def mainmenu():
     
@@ -236,7 +261,8 @@ def mainmenu():
     print("Enter '2' To Enter Flight Details")
     print("Enter '3' To Enter Price Plan And Calculate Profit")
     print("Enter '4' To Clear Data")
-    print("Enter '5' To Quit")
+    print("Enter '5' To Change Portal Type (Staff/User)")
+    print("Enter '6' To Quit")
     
     print("")
     
@@ -264,6 +290,10 @@ def mainmenuchoices():
         cleardata()
         
     elif menuuser == '5':
+        
+        mainmenuchoice()
+        
+    elif menuuser == '6':
         
         quitsec()
         
@@ -717,6 +747,7 @@ def priceplan():
         print("")
         
         priceplancheckpoint=input("Enter anything to continue: ")
+        print("")
         
         savecheckpoint()
         
@@ -725,14 +756,15 @@ def priceplan():
         print("Enter '1' to return to the main menu.")
         print("Enter '2' to save a flight.")
         
+        print("")
         saveflightcheckpoint=input("Enter choice here: ")
         print("")
         
-        if saveflightcheckpoint == '1'
+        if saveflightcheckpoint == '1':
         
             mainmenu()
             
-        elif saveflightcheckpoint == '2'
+        elif saveflightcheckpoint == '2':
         
             saveflight()
             
@@ -742,6 +774,8 @@ def priceplan():
             print("")
             
             savecheckpoint()
+            
+    priceplancheck1()
     
 def cleardata():
     
@@ -835,12 +869,16 @@ def quitsec():
     
 def saveflight():
     
-    global ukairportchoice
-    global ukairportchoicecode
-    global overseasairportchoice
-    global overseasairportchoicecode
-    global planechoice
-    global pricestandard
-    global pricefirst
+    print("Current save slots: ")
+    print("")
+    
+    print("Slot 1: " +flight1)
+    print("Slot 2: " +flight2)
+    print("Slot 3: " +flight3)
+    
+def mainmenuuser():
+    
+    print("Main Menu:")
+    print("Enter '1' to ")
     
 start()
