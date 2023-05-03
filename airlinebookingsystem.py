@@ -123,7 +123,7 @@ flightincome = ''
 global flightprofit
 flightprofit = ''
 
-#Flights
+#Saved Flight Database
 global flight1
 flight1 = 'No Flight Scheduled.'
 #====================
@@ -261,8 +261,9 @@ def mainmenu():
     print("Enter '2' To Enter Flight Details")
     print("Enter '3' To Enter Price Plan And Calculate Profit")
     print("Enter '4' To Clear Data")
-    print("Enter '5' To Change Portal Type (Staff/User)")
-    print("Enter '6' To Quit")
+    print("Enter '5' To View Save Slots")
+    print("Enter '6' To Change Portal Type (Staff/User)")
+    print("Enter '7' To Quit")
     
     print("")
     
@@ -291,9 +292,13 @@ def mainmenuchoices():
         
     elif menuuser == '5':
         
-        mainmenuchoice()
+        viewsaveslot()
         
     elif menuuser == '6':
+        
+        mainmenuchoice()
+        
+    elif menuuser == '7':
         
         quitsec()
         
@@ -869,6 +874,8 @@ def quitsec():
     
 def saveflight():
     
+    print("Flight saving: " +ukairportchoice+ " - " +overseasairportchoice+ "")
+    
     print("Current save slots: ")
     print("")
     
@@ -876,9 +883,255 @@ def saveflight():
     print("Slot 2: " +flight2)
     print("Slot 3: " +flight3)
     
+    print("")
+    savecheckpoint=input("Which save slot would you like to use? (Enter '0' to cancel) ")
+    print("")
+    
+    if savecheckpoint == '0':
+        
+        print("Canceled!")
+        print("")
+        
+        mainmenu()
+        
+    elif savecheckpoint == '1':
+        
+        def next1():
+            
+            next2()
+            
+        def next1override():
+            
+            flight1checkpoint=input("Are you sure you would like to override the save slot? (y/n) ")
+            print("")
+            
+            if flight1checkpoint == 'y' or flight1checkpoint == 'Y':
+                
+                next2()
+                
+            elif flight1checkpoint == 'n' or flight1checkpoint == 'N':
+                
+                print("Operation stopped!")
+                print("")
+                
+                saveflight()
+                
+            else:
+                
+                print("Invalid Input! Please try again...")
+                print("")
+                
+                next1override()
+                
+        def next2():
+            
+            global flight1
+            global flight1uk
+            global flight1ukcode
+            global flight1os
+            global flight1oscode
+            global flight1planechoice
+            global flight1standard
+            global flight1first
+            
+            flight1=(ukairportchoice+ " - " +overseasairportchoice+ "")
+            
+            flight1uk=ukairportchoice
+            
+            flight1ukcode=ukairportchoicecode
+            
+            flight1os=overseasairportchoice
+            
+            flight1oscode=overseasairportchoicecode
+            
+            flight1planechoice=planechoice
+            
+            flight1standard=pricestandard
+            
+            flight1first=pricefirst
+            
+            next3()
+            
+        def next3():
+            
+            print("Save complete!")
+            print("")
+            
+            mainmenu()
+        
+        if flight1 == 'No Flight Scheduled.':
+            
+            next1()
+            
+        else:
+            
+            next1override()
+            
+    elif savecheckpoint == '2':
+        
+        def next1():
+            
+            next2()
+            
+        def next1override():
+            
+            flight2checkpoint=input("Are you sure you would like to override the save slot? (y/n) ")
+            print("")
+            
+            if flight2checkpoint == 'y' or flight2checkpoint == 'Y':
+                
+                next2()
+                
+            elif flight2checkpoint == 'n' or flight2checkpoint == 'N':
+                
+                print("Operation stopped!")
+                print("")
+                
+                saveflight()
+                
+            else:
+                
+                print("Invalid Input! Please try again...")
+                print("")
+                
+                next1override()
+                
+        def next2():
+            
+            global flight2
+            global flight2uk
+            global flight2ukcode
+            global flight2os
+            global flight2oscode
+            global flight2planechoice
+            global flight2standard
+            global flight2first
+            
+            flight2=(ukairportchoice+ " - " +overseasairportchoice+ "")
+            
+            flight2uk=ukairportchoice
+    
+            flight2ukcode=ukairportchoicecode
+            
+            flight2os=overseasairportchoice
+            
+            flight2oscode=overseasairportchoicecode
+            
+            flight2planechoice=planechoice
+            
+            flight2standard=pricestandard
+            
+            flight2first=pricefirst
+            
+            next3()
+            
+        def next3():
+            
+            print("Save complete!")
+            print("")
+            
+            mainmenu()
+        
+        if flight2 == 'No Flight Scheduled.':
+            
+            next1()
+            
+        else:
+            
+            next1override()
+            
+    elif savecheckpoint == '3':
+        
+        def next1():
+            
+            next2()
+            
+        def next1override():
+            
+            flight3checkpoint=input("Are you sure you would like to override the save slot? (y/n) ")
+            print("")
+            
+            if flight3checkpoint == 'y' or flight3checkpoint == 'Y':
+                
+                next2()
+                
+            elif flight3checkpoint == 'n' or flight3checkpoint == 'N':
+                
+                print("Operation stopped!")
+                print("")
+                
+                saveflight()
+                
+            else:
+                
+                print("Invalid Input! Please try again...")
+                print("")
+                
+                next1override()
+                
+        def next2():
+            
+            global flight3
+            global flight3uk
+            global flight3ukcode
+            global flight3os
+            global flight3oscode
+            global flight3planechoice
+            global flight3standard
+            global flight3first
+            
+            flight3=(ukairportchoice+ " - " +overseasairportchoice+ "")
+            
+            flight3uk=ukairportchoice
+        
+            flight3ukcode=ukairportchoicecode
+            
+            flight3os=overseasairportchoice
+            
+            flight3oscode=overseasairportchoicecode
+        
+            flight3planechoice=planechoice
+            
+            flight3standard=pricestandard
+            
+            flight3first=pricefirst
+            
+            next3()
+            
+        def next3():
+            
+            print("Save complete!")
+            print("")
+            
+            mainmenu()
+        
+        if flight3 == 'No Flight Scheduled.':
+            
+            next1()
+            
+        else:
+            
+            next1override()
+        
+    else:
+        
+        print("Invalid Input! Please try again...")
+        print("")
+        
+        saveflight()
+        
+def viewsaveslot():
+    
+    print(flight1)
+    print(flight2)
+    print(flight3)
+    
+    print("")
+    mainmenu()
+    
 def mainmenuuser():
     
     print("Main Menu:")
-    print("Enter '1' to ")
+    print("Enter '1' to ...")
     
 start()
