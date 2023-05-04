@@ -1281,7 +1281,7 @@ def searchflights():
         
         if searchadv == 'y' or searchadv == 'Y':
         
-            print("Feature Coming Soon!")
+            print("Advanced Search: Feature Coming Soon!")
             print("")
             
             searchflightssec()
@@ -1302,12 +1302,96 @@ def searchflights():
             
     def searchflightssec():
         
-        print("Feature Coming Soon!")
-        print("")
-        
-        mainmenuuser()
+        if searchuk == ukairport1code:
+            
+            if searchos == overseasairport1code:
+                
+                if flight1ukcode
+                
+            else:
+                
+                if searchos == overseasairport2code:
+                    
+                    #
+                    
+                else:
+                    
+                    if searchos == overseasairport3code:
+                        
+                        #
+                        
+                    else:
+                        
+                        if searchos == overseasairport4code:
+                            
+                            #
+                            
+                        else:
+                            
+                            if searchos == overseasairport5code:
+                                
+                                #
+                                
+                            else:
+                                
+                                print("No Aircraft has been scheduled to land from your selected airport (" +searchos+ ") according to our data.")
+                                print("Please try again...")
+                                
+                                print("")
+                                searchflightsfirst()
+            
+        else:
+            
+            if searchuk == ukairport2code:
+                
+                if searchos == overseasairport1code:
+                
+                    #
+                
+                else:
+                    
+                    if searchos == overseasairport2code:
+                        
+                        #
+                        
+                    else:
+                        
+                        if searchos == overseasairport3code:
+                            
+                            #
+                            
+                        else:
+                            
+                            if searchos == overseasairport4code:
+                                
+                                #
+                                
+                            else:
+                                
+                                if searchos == overseasairport5code:
+                                    
+                                    #
+                                    
+                                else:
+                                    
+                                    print("No Aircraft has been scheduled to land from your selected airport (" +searchos+ ") according to our data.")
+                                    print("Please try again...")
+                                    
+                                    print("")
+                                    searchflightsfirst()
+                
+            else:
+                            
+                print("No Aircraft has been scheduled to leave from your selected airport (" +searchuk+ ") according to our data.")
+                print("Please try again...")
+                
+                print("")
+                searchflightsfirst()
     
     print("Search Flights: ")
+    print("")
+    
+    print("NOTE - Enter a VALID Airport Code in ALL Capitals!")
     print("")
     
     searchflightsfirst()
