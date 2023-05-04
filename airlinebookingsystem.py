@@ -244,6 +244,8 @@ def start():
     print("First Time Instructions:")
     print("Please select an option below. Type the number and press enter.")
     print("")
+    print("Airport Codes MUST be in ALL capitals.")
+    print("")
     
     mainmenuchoice()
     
@@ -1262,7 +1264,52 @@ def availflights():
 
 def searchflights():
     
-    print("Feature Coming Soon!")
-    mainmenuuser()
+    def searchflightsfirst():
+        
+        global searchuk
+        global searchos
+        
+        searchuk=input("Departing Airport Code? ")
+        searchos=input("Arrival Airport Code? ")
+        
+        searchflightsadv()
+    
+    def searchflightsadv():
+        
+        searchadv=input("Advanced Search? (y/n) ")
+        print("")
+        
+        if searchadv == 'y' or searchadv == 'Y':
+        
+            print("Feature Coming Soon!")
+            print("")
+            
+            searchflightssec()
+        
+        elif searchadv == 'n' or searchadv == 'N':
+            
+            print("Advance Search Skipped!")
+            print("")
+        
+            searchflightssec()
+        
+        else:
+        
+            print("Invalid Input! Please try again...")
+            print("")
+            
+            searchflightsadv()
+            
+    def searchflightssec():
+        
+        print("Feature Coming Soon!")
+        print("")
+        
+        mainmenuuser()
+    
+    print("Search Flights: ")
+    print("")
+    
+    searchflightsfirst()
     
 start()
