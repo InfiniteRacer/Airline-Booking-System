@@ -347,7 +347,7 @@ def mainmenuuserchoices():
         
     elif menuchoice == '4':
         
-        quitsec()
+        quitsecuser()
         
     else:
         
@@ -916,6 +916,35 @@ def quitsec():
         print("")
         
         quitsec()
+        
+    quitsec()
+    
+def quitsecuser():
+    
+    def quitsecfinal():
+    
+        print("You have ended the program! Your data has also been cleared automatically.")
+        exit()
+        
+    quituser=input("Are you sure you want to quit? (y/n) ")
+    
+    if quituser == 'y' or quituser == 'Y':
+        
+        print("")
+        quitsecfinal()
+        
+    elif quituser == 'n' or quituser == 'N':
+        
+        print("Operation stopped! Returning you back to the main menu...")
+        print("")
+        mainmenuuser()
+        
+    else:
+        
+        print("Invalid Input! Please try again.")
+        print("")
+        
+        quitsecuser()
         
     quitsec()
     
