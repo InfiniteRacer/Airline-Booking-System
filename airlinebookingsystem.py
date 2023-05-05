@@ -1312,7 +1312,7 @@ def searchflights():
             
             if searchos == overseasairport1code:
                 
-                if flight1ukcode == overseasairport1code and flight1oscode == ukairport1code:
+                if flight1ukcode == ukairport1code and flight1oscode == overseasairport1code:
                         
                     print("FROM:")
                     print(flight1uk+ " (" +flight1ukcode+ ")")
@@ -1333,7 +1333,7 @@ def searchflights():
                 
                 if searchos == overseasairport2code:
                     
-                    if flight2ukcode == overseasairport2code and flight2oscode == ukairport2code:
+                    if flight2ukcode == ukairport2code and flight2oscode == overseasairport2code:
                     
                         print("FROM:")
                         print(flight2uk+ " (" +flight2ukcode+ ")")
@@ -1354,7 +1354,7 @@ def searchflights():
                     
                     if searchos == overseasairport3code:
                         
-                        if flight3ukcode == overseasairport3code and flight3oscode == ukairport3code:
+                        if flight3ukcode == ukairport3code and flight3oscode == overseasairport3code:
                     
                             print("FROM:")
                             print(flight3uk+ " (" +flight3ukcode+ ")")
@@ -1373,9 +1373,9 @@ def searchflights():
                         
                     else:
                         
-                        if searchos == overseasairport4code and flight4oscode == ukairport4code:
+                        if searchos == overseasairport4code:
                             
-                            if flight4ukcode == overseasairport4code:
+                            if flight4ukcode == ukairport4code and flight4oscode == overseasairport4code:
                     
                                 print("FROM:")
                                 print(flight4uk+ " (" +flight4ukcode+ ")")
@@ -1396,7 +1396,7 @@ def searchflights():
                             
                             if searchos == overseasairport5code:
                                 
-                                if flight5ukcode == overseasairport5code and flight5oscode == ukairport5code:
+                                if flight5ukcode == ukairport5code and flight5oscode == overseasairport5code:
                     
                                     print("FROM:")
                                     print(flight5uk+ " (" +flight5ukcode+ ")")
@@ -1427,7 +1427,7 @@ def searchflights():
                 
                 if searchos == overseasairport1code:
                 
-                    if flight1ukcode == overseasairport1code and flight1oscode == ukairport1code:
+                    if flight1ukcode == ukairport1code and flight1oscode == overseasairport1code:
                     
                         print("FROM:")
                         print(flight1uk+ " (" +flight1ukcode+ ")")
@@ -1448,7 +1448,7 @@ def searchflights():
                     
                     if searchos == overseasairport2code:
                         
-                        if flight2ukcode == overseasairport2code and flight2oscode == ukairport2code:
+                        if flight2ukcode == ukairport2code and flight2oscode == overseasairport2code:
                     
                             print("FROM:")
                             print(flight2uk+ " (" +flight2ukcode+ ")")
@@ -1469,7 +1469,7 @@ def searchflights():
                         
                         if searchos == overseasairport3code:
                             
-                            if flight3ukcode == overseasairport3code and flight3oscode == ukairport3code:
+                            if flight3ukcode == ukairport3code and flight3oscode == overseasairport3code:
                     
                                 print("FROM:")
                                 print(flight3uk+ " (" +flight3ukcode+ ")")
@@ -1490,7 +1490,7 @@ def searchflights():
                             
                             if searchos == overseasairport4code:
                                 
-                                if flight4ukcode == overseasairport4code and flight4oscode == ukairport4code:
+                                if flight4ukcode == ukairport4code and flight4oscode == overseasairport4code:
                     
                                     print("FROM:")
                                     print(flight4uk+ " (" +flight4ukcode+ ")")
@@ -1511,7 +1511,7 @@ def searchflights():
                                 
                                 if searchos == overseasairport5code:
                                     
-                                    if flight5ukcode == overseasairport5code  and flight5oscode == ukairport5code:
+                                    if flight5ukcode == ukairport5code and flight5oscode == overseasairport5code:
                     
                                         print("FROM:")
                                         print(flight5uk+ " (" +flight5ukcode+ ")")
