@@ -1284,11 +1284,17 @@ def searchflights():
             print("Advanced Search: Feature Coming Soon!")
             print("")
             
+            print("Current Available Flights:")
+            print("")
+            
             searchflightssec()
         
         elif searchadv == 'n' or searchadv == 'N':
             
             print("Advance Search Skipped!")
+            print("")
+            
+            print("Current Available Flights:")
             print("")
         
             searchflightssec()
@@ -1306,31 +1312,106 @@ def searchflights():
             
             if searchos == overseasairport1code:
                 
-                if flight1ukcode
+                if flight1ukcode == overseasairport1code and flight1oscode == ukairport1code:
+                        
+                    print("FROM:")
+                    print(flight1uk+ " (" +flight1ukcode+ ")")
+                    print("TO:")
+                    print(flight1os+ " (" +flight1oscode+ ")")
+                    print("")
+                    print("Plane Model - " +flight1planechoice)
+                    print("")
+                    print("Economy Class - Starting at: £" +flight1standard)
+                    print("First Class - Starting at: £" +flight1first)
+                    
+                else:
+                    
+                    print("")
+                    flightsearchno()
                 
             else:
                 
                 if searchos == overseasairport2code:
                     
-                    #
+                    if flight2ukcode == overseasairport2code and flight2oscode == ukairport2code:
+                    
+                        print("FROM:")
+                        print(flight2uk+ " (" +flight2ukcode+ ")")
+                        print("TO:")
+                        print(flight2os+ " (" +flight2oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight2planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight2standard)
+                        print("First Class - Starting at: £" +flight2first)
+                    
+                    else:
+                        
+                        print("")
+                        flightsearchno()
                     
                 else:
                     
                     if searchos == overseasairport3code:
                         
-                        #
+                        if flight3ukcode == overseasairport3code and flight3oscode == ukairport3code:
+                    
+                            print("FROM:")
+                            print(flight3uk+ " (" +flight3ukcode+ ")")
+                            print("TO:")
+                            print(flight3os+ " (" +flight3oscode+ ")")
+                            print("")
+                            print("Plane Model - " +flight3planechoice)
+                            print("")
+                            print("Economy Class - Starting at: £" +flight3standard)
+                            print("First Class - Starting at: £" +flight3first)
+                    
+                        else:
+                        
+                            print("")
+                            flightsearchno()
                         
                     else:
                         
-                        if searchos == overseasairport4code:
+                        if searchos == overseasairport4code and flight4oscode == ukairport4code:
                             
-                            #
+                            if flight4ukcode == overseasairport4code:
+                    
+                                print("FROM:")
+                                print(flight4uk+ " (" +flight4ukcode+ ")")
+                                print("TO:")
+                                print(flight4os+ " (" +flight4oscode+ ")")
+                                print("")
+                                print("Plane Model - " +flight4planechoice)
+                                print("")
+                                print("Economy Class - Starting at: £" +flight4standard)
+                                print("First Class - Starting at: £" +flight4first)
+                    
+                            else:
+                        
+                                print("")
+                                flightsearchno()
                             
                         else:
                             
                             if searchos == overseasairport5code:
                                 
-                                #
+                                if flight5ukcode == overseasairport5code and flight5oscode == ukairport5code:
+                    
+                                    print("FROM:")
+                                    print(flight5uk+ " (" +flight5ukcode+ ")")
+                                    print("TO:")
+                                    print(flight5os+ " (" +flight5oscode+ ")")
+                                    print("")
+                                    print("Plane Model - " +flight5planechoice)
+                                    print("")
+                                    print("Economy Class - Starting at: £" +flight5standard)
+                                    print("First Class - Starting at: £" +flight5first)
+                    
+                                else:
+                        
+                                    print("")
+                                    flightsearchno()
                                 
                             else:
                                 
@@ -1346,31 +1427,106 @@ def searchflights():
                 
                 if searchos == overseasairport1code:
                 
-                    #
+                    if flight1ukcode == overseasairport1code and flight1oscode == ukairport1code:
+                    
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                    
+                    else:
+                        
+                        print("")
+                        flightsearchno()
                 
                 else:
                     
                     if searchos == overseasairport2code:
                         
-                        #
+                        if flight2ukcode == overseasairport2code and flight2oscode == ukairport2code:
+                    
+                            print("FROM:")
+                            print(flight2uk+ " (" +flight2ukcode+ ")")
+                            print("TO:")
+                            print(flight2os+ " (" +flight2oscode+ ")")
+                            print("")
+                            print("Plane Model - " +flight2planechoice)
+                            print("")
+                            print("Economy Class - Starting at: £" +flight2standard)
+                            print("First Class - Starting at: £" +flight2first)
+                    
+                        else:
+                        
+                            print("")
+                            flightsearchno()
                         
                     else:
                         
                         if searchos == overseasairport3code:
                             
-                            #
+                            if flight3ukcode == overseasairport3code and flight3oscode == ukairport3code:
+                    
+                                print("FROM:")
+                                print(flight3uk+ " (" +flight3ukcode+ ")")
+                                print("TO:")
+                                print(flight3os+ " (" +flight3oscode+ ")")
+                                print("")
+                                print("Plane Model - " +flight3planechoice)
+                                print("")
+                                print("Economy Class - Starting at: £" +flight3standard)
+                                print("First Class - Starting at: £" +flight3first)
+                    
+                            else:
+                        
+                                print("")
+                                flightsearchno()
                             
                         else:
                             
                             if searchos == overseasairport4code:
                                 
-                                #
+                                if flight4ukcode == overseasairport4code and flight4oscode == ukairport4code:
+                    
+                                    print("FROM:")
+                                    print(flight4uk+ " (" +flight4ukcode+ ")")
+                                    print("TO:")
+                                    print(flight4os+ " (" +flight4oscode+ ")")
+                                    print("")
+                                    print("Plane Model - " +flight4planechoice)
+                                    print("")
+                                    print("Economy Class - Starting at: £" +flight4standard)
+                                    print("First Class - Starting at: £" +flight4first)
+                    
+                                else:
+                        
+                                    print("")
+                                    flightsearchno()
                                 
                             else:
                                 
                                 if searchos == overseasairport5code:
                                     
-                                    #
+                                    if flight5ukcode == overseasairport5code  and flight5oscode == ukairport5code:
+                    
+                                        print("FROM:")
+                                        print(flight5uk+ " (" +flight5ukcode+ ")")
+                                        print("TO:")
+                                        print(flight5os+ " (" +flight5oscode+ ")")
+                                        print("")
+                                        print("Plane Model - " +flight5planechoice)
+                                        print("")
+                                        print("Economy Class - Starting at: £" +flight5standard)
+                                        print("First Class - Starting at: £" +flight5first)
+                    
+                                    else:
+                        
+                                        print("")
+                                        flightsearchno()
                                     
                                 else:
                                     
@@ -1378,7 +1534,7 @@ def searchflights():
                                     print("Please try again...")
                                     
                                     print("")
-                                    searchflightsfirst()
+                                    mainmenuuser()
                 
             else:
                             
@@ -1386,7 +1542,7 @@ def searchflights():
                 print("Please try again...")
                 
                 print("")
-                searchflightsfirst()
+                mainmenuuser()
     
     print("Search Flights: ")
     print("")
@@ -1395,5 +1551,12 @@ def searchflights():
     print("")
     
     searchflightsfirst()
+    
+def flightsearchno():
+    
+    print("No Aircraft has been scheduled to leave from your selected airports (" +searchuk+ " & " +searchos+ ") according to our data.")
+    print("")
+    
+    mainmenuuser()
     
 start()
