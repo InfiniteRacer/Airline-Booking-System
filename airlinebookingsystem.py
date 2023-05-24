@@ -1562,7 +1562,55 @@ def flightsearchno():
 def filehandlesection():
     
     file = open('airlineflights.txt','w')
-    file.write("Flight 1 = ")
+    file.write("Saved Flights:""\n")
+    file.write("" "\n")
+    
+    file.write("FROM:""\n")
+    file.write(flight1uk+ " (" +flight1ukcode+ ") \n")
+    file.write("" "\n")
+    file.write("TO:""\n")
+    file.write(flight1os+ " (" +flight1oscode+ ") \n")
+    file.write("" "\n")
+    file.write("Aircraft model = " +flight1planechoice+ "\n")
+    file.write("" "\n")
+    file.write("Economy Ticket Price = £" +flight1standard+ "\n")
+    file.write("First Class Ticket Price = £" +flight1first+ "\n")
+    file.write("" "\n")
+    file.write("-------------------------------------------""\n")
+    
+    file.write("" "\n")
+    file.write("FROM:""\n")
+    file.write(flight2uk+ " (" +flight2ukcode+ ") \n")
+    file.write("" "\n")
+    file.write("TO:""\n")
+    file.write(flight2os+ " (" +flight2oscode+ ") \n")
+    file.write("" "\n")
+    file.write("Aircraft model = " +flight2planechoice+ "\n")
+    file.write("" "\n")
+    file.write("Economy Ticket Price = £" +flight2standard+ "\n")
+    file.write("First Class Ticket Price = £" +flight2first+ "\n")
+    file.write("" "\n")
+    file.write("-------------------------------------------""\n")
+    
+    file.write("" "\n")
+    file.write("FROM:""\n")
+    file.write(flight3uk+ " (" +flight3ukcode+ ") \n")
+    file.write("" "\n")
+    file.write("TO:""\n")
+    file.write(flight3os+ " (" +flight3oscode+ ") \n")
+    file.write("" "\n")
+    file.write("Aircraft model = " +flight3planechoice+ "\n")
+    file.write("" "\n")
+    file.write("Economy Ticket Price = £" +flight3standard+ "\n")
+    file.write("First Class Ticket Price = £" +flight3first+ "\n")
+    file.write("" "\n")
+    file.write("-------------------------------------------""\n")
+    
     file.close()
-
+    
+    print("The database file has also been updated! Please completely close the file and open it again for the updated version.")
+    
+    print("")
+    mainmenu()
+    
 start()
