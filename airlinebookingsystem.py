@@ -1032,10 +1032,7 @@ def saveflight():
             
         def next3():
             
-            print("Save complete!")
-            print("")
-            
-            mainmenu()
+            filehandlesection()
         
         if flight1 == 'No Flight Scheduled.':
             
@@ -1105,10 +1102,7 @@ def saveflight():
             
         def next3():
             
-            print("Save complete!")
-            print("")
-            
-            mainmenu()
+            filehandlesection()
         
         if flight2 == 'No Flight Scheduled.':
             
@@ -1178,10 +1172,7 @@ def saveflight():
             
         def next3():
             
-            print("Save complete!")
-            print("")
-            
-            mainmenu()
+            filehandlesection()
         
         if flight3 == 'No Flight Scheduled.':
             
