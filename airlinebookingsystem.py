@@ -269,6 +269,12 @@ def mainmenu():
     
     print("")
     
+    print(maxrange)
+    print(planechoicerange)
+    print(distance)
+        
+    print("")
+    
     mainmenuchoices()
     
 def mainmenuchoices():
@@ -724,12 +730,6 @@ def priceplan():
             print("")
             mainmenu()
             
-        elif float(firstclassseats) < 8:
-            
-            print("You need to enter all the details (Including About First Class) before continuing.")
-            print("")
-            mainmenu() 
-            
         else:
             
             priceplancheck4()
@@ -738,11 +738,11 @@ def priceplan():
         
         if maxrange == distance:
             
-            print("You need to select a different aircraft! It isn't possible to complete the route with the selected aircraft.")
+            print("You need to select a different aircraft! It isn't possible/unsafe to complete the route with the selected aircraft.")
             print("")
             mainmenu()
             
-        if maxrange > distance:
+        elif maxrange > distance:
             
             print("You need to select a different aircraft! It isn't possible to complete the route with the selected aircraft.")
             print("")
