@@ -1,4 +1,10 @@
 #==============================================================================================
+        
+#Airline Booking System By Sam Powsney
+        
+#==============================================================================================
+
+#==============================================================================================
 
 #Variable Database Section
 
@@ -26,33 +32,40 @@ plane3minfirst = '14'
 #UK Airports
 ukairport1 = 'Liverpool John Lennon'
 ukairport1code = 'LPL'
+ukairport1codelwr = 'lpl'
 #=============
 ukairport2 = 'Bournemouth International'
 ukairport2code = 'BOH'
+ukairport2codelwr = 'boh'
 
 #Overseas Airports
 overseasairport1 = 'John F Kennedy International'
 overseasairport1code = 'JFK'
+overseasairport1codelwr = 'jfk'
 overseasairport1lpl = '5326'
 overseasairport1boh = '5486'
 #===================
 overseasairport2 = 'Paris-Orly'
 overseasairport2code = 'ORY'
+overseasairport2codelwr = 'ory'
 overseasairport2lpl = '629'
 overseasairport2boh = '379'
 #===================
 overseasairport3 = 'Adolfo Suarez Madrid- Barajas'
 overseasairport3code = 'MAD'
+overseasairport3codelwr = 'mad'
 overseasairport3lpl = '1428'
 overseasairport3boh = '1151'
 #===================
 overseasairport4 = 'Amsterdam Schiphol'
 overseasairport4code = 'AMS'
+overseasairport4codelwr = 'ams'
 overseasairport4lpl = '526'
 overseasairport4boh = '489'
 #===================
 overseasairport5 = 'Cairo International'
 overseasairport5code = 'CAI'
+overseasairport5codelwr = 'cai'
 overseasairport5lpl = '3779'
 overseasairport5boh = '3584'
 
@@ -264,15 +277,10 @@ def mainmenu():
     print("Enter '3' To Enter Price Plan And Calculate Profit")
     print("Enter '4' To Clear Data")
     print("Enter '5' To View Save Slots")
-    print("Enter '6' To Change Portal Type (Staff/User)")
-    print("Enter '7' To Quit")
+    print("Enter '6' To Clear File Database")
+    print("Enter '7' To Change Portal Type (Staff/User)")
+    print("Enter '8' To Quit")
     
-    print("")
-    
-    print(maxrange)
-    print(planechoicerange)
-    print(distance)
-        
     print("")
     
     mainmenuchoices()
@@ -304,9 +312,13 @@ def mainmenuchoices():
         
     elif menuuser == '6':
         
-        mainmenuchoice()
+        fileclear()
         
     elif menuuser == '7':
+        
+        mainmenuchoice()
+        
+    elif menuuser == '8':
         
         quitsec()
         
@@ -328,7 +340,7 @@ def mainmenuuser():
     print("Main Menu:")
     
     print("Enter '1' To View Flights Available")
-    print("Enter '2' To Search Flights")
+    print("Enter '2' To Search Flights (IN PROGRESS - CURRENTLY NOT WORKING)")
     print("Enter '3' To Change Portal Type (Staff/User)")
     print("Enter '4' To Quit")
     
@@ -370,6 +382,12 @@ def mainmenuuserchoices():
         
 #==============================================================================================
         
+#==============================================================================================
+        
+#Airport Details
+        
+#==============================================================================================
+        
 def airportdetails():
     
     global ukairportchoice
@@ -386,17 +404,17 @@ def airportdetails():
         
         overseasairportchoicenon=input("Enter Overseas Airport Code: ")
         
-        if overseasairportchoicenon == overseasairport1code:
+        if overseasairportchoicenon == overseasairport1code or overseasairportchoicenon == overseasairport1codelwr:
             
             overseasaiportchoicecode = overseasairport1code
             
             overseasairportchoice = overseasairport1
             
-            if ukairportchoicecode == ukairport1code:
+            if ukairportchoicecode == ukairport1code or ukairportchoicecode == ukairport1codelwr:
                 
                 distance = overseasairport1lpl
                 
-            elif ukairportchoicecode == ukairport2code:
+            elif ukairportchoicecode == ukairport2code or ukairportchoicecode == ukairport2codelwr:
                 
                 distance = overseasairport1boh
                 
@@ -410,17 +428,17 @@ def airportdetails():
             print("")
             airportdetailsfinal()
             
-        elif overseasairportchoicenon == overseasairport2code:
+        elif overseasairportchoicenon == overseasairport2code or overseasairportchoicenon == overseasairport2codelwr:
             
             overseasairportchoicecode = overseasairport2code
             
             overseasairportchoice = overseasairport2
             
-            if ukairportchoicecode == ukairport1code:
+            if ukairportchoicecode == ukairport1code or ukairportchoicecode == ukairport1codelwr:
                 
                 distance = overseasairport2lpl
                 
-            elif ukairportchoicecode == ukairport2code:
+            elif ukairportchoicecode == ukairport2code or ukairportchoicecode == ukairport2codelwr:
                 
                 distance = overseasairport2boh
                 
@@ -434,17 +452,17 @@ def airportdetails():
             print("")
             airportdetailsfinal()
             
-        elif overseasairportchoicenon == overseasairport3code:
+        elif overseasairportchoicenon == overseasairport3code or overseasairportchoicenon == overseasairport3codelwr:
             
             overseasairportchoicecode = overseasairport3code
             
             overseasairportchoice = overseasairport3
             
-            if ukairportchoicecode == ukairport1code:
+            if ukairportchoicecode == ukairport1code or ukairportchoicecode == ukairport1code:
                 
                 distance = overseasairport3lpl
                 
-            elif ukairportchoicecode == ukairport2code:
+            elif ukairportchoicecode == ukairport2code or ukairportchoicecode == ukairport2code:
                 
                 distance = overseasairport3boh
                 
@@ -458,17 +476,17 @@ def airportdetails():
             print("")
             airportdetailsfinal()
             
-        elif overseasairportchoicenon == overseasairport4code:
+        elif overseasairportchoicenon == overseasairport4code or overseasairportchoicenon == overseasairport4codelwr:
             
             overseasairportchoicecode = overseasairport4code
             
             overseasairportchoice = overseasairport4
             
-            if ukairportchoicecode == ukairport1code:
+            if ukairportchoicecode == ukairport1code or ukairportchoicecode == ukairport1codelwr:
                 
                 distance = overseasairport4lpl
                 
-            elif ukairportchoicecode == ukairport2code:
+            elif ukairportchoicecode == ukairport2code or ukairportchoicecode == ukairport2codelwr:
                 
                 distance = overseasairport4boh
                 
@@ -482,17 +500,17 @@ def airportdetails():
             print("")
             airportdetailsfinal()
             
-        elif overseasairportchoicenon == overseasairport5code:
+        elif overseasairportchoicenon == overseasairport5code or overseasairportchoicenon == overseasairport5codelwr:
             
             overseasairportchoicecode = overseasairport5code
             
             overseasairportchoice = overseasairport5
             
-            if ukairportchoicecode == ukairport1code:
+            if ukairportchoicecode == ukairport1code or ukairportchoicecode == ukairport1codelwr:
                 
                 distance = overseasairport5lpl
                 
-            elif ukairportchoicecode == ukairport2code:
+            elif ukairportchoicecode == ukairport2code or ukairportchoicecode == ukairport2codelwr:
                 
                 distance = overseasairpor5boh
                 
@@ -522,7 +540,7 @@ def airportdetails():
     
     ukairportchoicenon=input("Enter UK Airport Code: ")
     
-    if ukairportchoicenon == ukairport1code:
+    if ukairportchoicenon == ukairport1code or ukairportchoicenon == ukairport1codelwr:
         
         ukairportchoicecode = ukairport1code
         
@@ -531,7 +549,7 @@ def airportdetails():
         print("")
         airportdetailsnext()
         
-    elif ukairportchoicenon == ukairport2code:
+    elif ukairportchoicenon == ukairport2code or ukairportchoicenon == ukairport2codelwr:
         
         ukairportchoicecode = ukairport2code
         
@@ -545,7 +563,13 @@ def airportdetails():
         print("Invalid Input. Please check the code and try again.")
         print("")
         
-        mainmenu()        
+        mainmenu()
+        
+#==============================================================================================
+        
+#Flight Details
+        
+#==============================================================================================
     
 def flightdetails():
     
@@ -683,6 +707,12 @@ def flightdetails():
         print("")
         
         mainmenu()
+        
+#==============================================================================================
+        
+#Price Plan
+        
+#==============================================================================================
     
 def priceplan():
     
@@ -831,6 +861,12 @@ def priceplan():
             
     priceplancheck1()
     
+#==============================================================================================
+        
+#Clear Data
+        
+#==============================================================================================
+    
 def cleardata():
     
     def cleardatafinal():
@@ -891,6 +927,12 @@ def cleardata():
         print("")
         
         cleardata()
+        
+#==============================================================================================
+        
+#Qui Section (Staff)
+        
+#==============================================================================================
     
 def quitsec():
     
@@ -921,6 +963,12 @@ def quitsec():
         
     quitsec()
     
+#==============================================================================================
+        
+#Qui Section (User)
+        
+#==============================================================================================
+    
 def quitsecuser():
     
     def quitsecfinal():
@@ -949,6 +997,12 @@ def quitsecuser():
         quitsecuser()
         
     quitsec()
+    
+#==============================================================================================
+        
+#Save Flight
+        
+#==============================================================================================
     
 def saveflight():
     
@@ -1189,6 +1243,12 @@ def saveflight():
         
         saveflight()
         
+#==============================================================================================
+        
+#View Save Flights & Available Flights
+        
+#==============================================================================================
+        
 def viewsaveslot():
     
     print("Flight Slot 1: " +flight1)
@@ -1252,6 +1312,12 @@ def availflights():
     print("")
     
     mainmenuuser()
+    
+#==============================================================================================
+        
+#Search Flights (IN PROGRESS - CURRENTLY NOT WORKING)
+        
+#==============================================================================================
 
 def searchflights():
     
@@ -1550,6 +1616,12 @@ def flightsearchno():
     
     mainmenuuser()
     
+#==============================================================================================
+        
+#File Air-Routes Database
+        
+#==============================================================================================
+    
 def filehandlesection():
     
     file = open('airlineflights.txt','w')
@@ -1604,4 +1676,94 @@ def filehandlesection():
     print("")
     mainmenu()
     
+#==============================================================================================
+        
+#File Clear
+        
+#==============================================================================================
+    
+def fileclear():
+    
+    print("Please Note - Your data will NOT be cleared, only the file will be reset to its default state.")
+    print("")
+    
+    fileclear2()
+    
+def fileclear2():
+    
+    checkfileclear=input("Are you sure you want to clear the file? (y/n) ")
+    print("")
+    
+    if checkfileclear == 'y' or checkfileclear == 'Y':
+        
+        fileclear3()
+        
+    elif checkfileclear == 'n' or checkfileclear == 'N':
+        
+        print("Clear stopped! Returning you back to the main menu...")
+        print("")
+        
+        mainmenu()
+        
+    else:
+        
+        print("Invalid Input! Please try again...")
+        print("")
+        
+        fileclear2()
+        
+def fileclear3():
+    
+    file = open('airlineflights.txt','w')
+    file.write("Saved Flights:""\n")
+    file.write("" "\n")
+    
+    file.write("FROM:""\n")
+    file.write("N/A \n")
+    file.write("" "\n")
+    file.write("TO:""\n")
+    file.write("N/A \n")
+    file.write("" "\n")
+    file.write("Aircraft model = N/A \n")
+    file.write("" "\n")
+    file.write("Economy Ticket Price = £N/A \n")
+    file.write("First Class Ticket Price = £N/A \n")
+    file.write("" "\n")
+    file.write("-------------------------------------------""\n")
+    
+    file.write("" "\n")
+    file.write("FROM:""\n")
+    file.write("N/A \n")
+    file.write("" "\n")
+    file.write("TO:""\n")
+    file.write("N/A \n")
+    file.write("" "\n")
+    file.write("Aircraft model = N/A \n")
+    file.write("" "\n")
+    file.write("Economy Ticket Price = £N/A \n")
+    file.write("First Class Ticket Price = £N/A \n")
+    file.write("" "\n")
+    file.write("-------------------------------------------""\n")
+
+    file.write("" "\n")
+    file.write("FROM:""\n")
+    file.write("N/A \n")
+    file.write("" "\n")
+    file.write("TO:""\n")
+    file.write("N/A \n")
+    file.write("" "\n")
+    file.write("Aircraft model = N/A \n")
+    file.write("" "\n")
+    file.write("Economy Ticket Price = £N/A \n")
+    file.write("First Class Ticket Price = £N/A \n")
+    file.write("" "\n")
+    file.write("-------------------------------------------""\n")
+    
+    file.close()
+    
+    print("The database file has been cleared and set back to its default! Please completely close the file and open it again for the updated version.")
+    
+    print("")
+    mainmenu()
+
 start()
