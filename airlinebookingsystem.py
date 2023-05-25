@@ -512,7 +512,7 @@ def airportdetails():
                 
             elif ukairportchoicecode == ukairport2code or ukairportchoicecode == ukairport2codelwr:
                 
-                distance = overseasairpor5boh
+                distance = overseasairport5boh
                 
             else:
                 
