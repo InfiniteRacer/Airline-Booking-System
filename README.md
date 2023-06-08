@@ -1,1 +1,1 @@
-# Check other text files for information
+# Check other text files for information (.md files)
