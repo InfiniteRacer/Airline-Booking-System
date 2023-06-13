@@ -37,7 +37,7 @@
 # - Can search saved flights
 #
 #----------------------------------------------------------------------
-# Upcoming Features OR Being Developed:
+# Upcoming Features / Being Developed:
 #----------------------------------------------------------------------
 #
 # - Create a User Profile
@@ -53,6 +53,8 @@
 #
 # *** Flights can be cancelled from User Management Section
 #
+#----------------------------------------------------------------------
+# Note Section:
 #----------------------------------------------------------------------
 #
 # NOTE 1 - These new/upcoming features may not work as intended until the segments have been announced as complete (Sections will be developed and released individually. Smaller untilted updates will be released now and again)
