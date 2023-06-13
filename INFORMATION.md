@@ -8,6 +8,6 @@
 #
 # COMPULSORY FILES FOR A FULLY WORKING CODE:
 #
-# *Currently None*
+# - *Currently None*
 #
 # Note - Check here regulary for required files
