@@ -7,6 +7,13 @@
 # - Can quit the program at MOST points
 #
 #----------------------------------------------------------------------
+# Danger Zone:
+#----------------------------------------------------------------------
+#
+# - Delete ALL created/saved user accounts
+# - Delete the information on the file 'database' (Flights)
+#
+#----------------------------------------------------------------------
 # Staff Portal:
 #----------------------------------------------------------------------
 #
@@ -27,7 +34,6 @@
 # - Can override a save slot
 # - Information & Flights saved are saved to a file 'database'
 # - Can clear the users inputted data
-# - Can clear the information on the file 'database'
 #
 #----------------------------------------------------------------------
 # User Portal:
