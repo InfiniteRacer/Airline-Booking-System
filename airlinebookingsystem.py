@@ -772,7 +772,7 @@ def priceplan():
             print("")
             mainmenu()
             
-        elif maxrange > distance:
+        elif maxrange < distance:
             
             print("You need to select a different aircraft! It isn't possible to complete the route with the selected aircraft.")
             print("")
@@ -1315,7 +1315,7 @@ def availflights():
     
 #==============================================================================================
         
-#Search Flights (IN PROGRESS - CURRENTLY NOT WORKING)
+#Search Flights
         
 #==============================================================================================
 
@@ -1381,6 +1381,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight1standard)
                     print("First Class - Starting at: £" +flight1first)
                     
+                    flightsearchagain()
+                    
                 elif flight2ukcode == searchuk and flight2oscode == searchos:
                     
                     print("FROM:")
@@ -1393,6 +1395,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight2standard)
                     print("First Class - Starting at: £" +flight2first)
                     
+                    flightsearchagain()
+                    
                 elif flight3ukcode == searchuk and flight3oscode == searchos:
                     
                     print("FROM:")
@@ -1404,6 +1408,8 @@ def searchflights():
                     print("")
                     print("Economy Class - Starting at: £" +flight3standard)
                     print("First Class - Starting at: £" +flight3first)
+                    
+                    flightsearchagain()
                     
                 else:
                     
@@ -1423,6 +1429,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight1standard)
                     print("First Class - Starting at: £" +flight1first)
                     
+                    flightsearchagain()
+                    
                 elif flight2ukcode == searchuk and flight2oscode == searchos:
                     
                     print("FROM:")
@@ -1435,6 +1443,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight2standard)
                     print("First Class - Starting at: £" +flight2first)
                     
+                    flightsearchagain()
+                    
                 elif flight3ukcode == searchuk and flight3oscode == searchos:
                     
                     print("FROM:")
@@ -1446,6 +1456,8 @@ def searchflights():
                     print("")
                     print("Economy Class - Starting at: £" +flight3standard)
                     print("First Class - Starting at: £" +flight3first)
+                    
+                    flightsearchagain()
                     
                 else:
                     
@@ -1465,6 +1477,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight1standard)
                     print("First Class - Starting at: £" +flight1first)
                     
+                    flightsearchagain()
+                    
                 elif flight2ukcode == searchuk and flight2oscode == searchos:
                     
                     print("FROM:")
@@ -1477,6 +1491,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight2standard)
                     print("First Class - Starting at: £" +flight2first)
                     
+                    flightsearchagain()
+                    
                 elif flight3ukcode == searchuk and flight3oscode == searchos:
                     
                     print("FROM:")
@@ -1488,6 +1504,8 @@ def searchflights():
                     print("")
                     print("Economy Class - Starting at: £" +flight3standard)
                     print("First Class - Starting at: £" +flight3first)
+                    
+                    flightsearchagain()
                     
                 else:
                     
@@ -1507,6 +1525,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight1standard)
                     print("First Class - Starting at: £" +flight1first)
                     
+                    flightsearchagain()
+                    
                 elif flight2ukcode == searchuk and flight2oscode == searchos:
                     
                     print("FROM:")
@@ -1519,6 +1539,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight2standard)
                     print("First Class - Starting at: £" +flight2first)
                     
+                    flightsearchagain()
+                    
                 elif flight3ukcode == searchuk and flight3oscode == searchos:
                     
                     print("FROM:")
@@ -1530,6 +1552,8 @@ def searchflights():
                     print("")
                     print("Economy Class - Starting at: £" +flight3standard)
                     print("First Class - Starting at: £" +flight3first)
+                    
+                    flightsearchagain()
                     
                 else:
                     
@@ -1549,6 +1573,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight1standard)
                     print("First Class - Starting at: £" +flight1first)
                     
+                    flightsearchagain()
+                    
                 elif flight2ukcode == searchuk and flight2oscode == searchos:
                     
                     print("FROM:")
@@ -1561,6 +1587,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight2standard)
                     print("First Class - Starting at: £" +flight2first)
                     
+                    flightsearchagain()
+                    
                 elif flight3ukcode == searchuk and flight3oscode == searchos:
                     
                     print("FROM:")
@@ -1572,6 +1600,8 @@ def searchflights():
                     print("")
                     print("Economy Class - Starting at: £" +flight3standard)
                     print("First Class - Starting at: £" +flight3first)
+                    
+                    flightsearchagain()
                     
                 else:
                     
@@ -1593,6 +1623,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight1standard)
                     print("First Class - Starting at: £" +flight1first)
                     
+                    flightsearchagain()
+                    
                 elif flight2ukcode == searchuk and flight2oscode == searchos:
                     
                     print("FROM:")
@@ -1605,6 +1637,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight2standard)
                     print("First Class - Starting at: £" +flight2first)
                     
+                    flightsearchagain()
+                    
                 elif flight3ukcode == searchuk and flight3oscode == searchos:
                     
                     print("FROM:")
@@ -1616,6 +1650,8 @@ def searchflights():
                     print("")
                     print("Economy Class - Starting at: £" +flight3standard)
                     print("First Class - Starting at: £" +flight3first)
+                    
+                    flightsearchagain()
                     
                 else:
                     
@@ -1635,6 +1671,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight1standard)
                     print("First Class - Starting at: £" +flight1first)
                     
+                    flightsearchagain()
+                    
                 elif flight2ukcode == searchuk and flight2oscode == searchos:
                     
                     print("FROM:")
@@ -1647,6 +1685,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight2standard)
                     print("First Class - Starting at: £" +flight2first)
                     
+                    flightsearchagain()
+                    
                 elif flight3ukcode == searchuk and flight3oscode == searchos:
                     
                     print("FROM:")
@@ -1658,6 +1698,8 @@ def searchflights():
                     print("")
                     print("Economy Class - Starting at: £" +flight3standard)
                     print("First Class - Starting at: £" +flight3first)
+                    
+                    flightsearchagain()
                     
                 else:
                     
@@ -1677,6 +1719,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight1standard)
                     print("First Class - Starting at: £" +flight1first)
                     
+                    flightsearchagain()
+                    
                 elif flight2ukcode == searchuk and flight2oscode == searchos:
                     
                     print("FROM:")
@@ -1689,6 +1733,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight2standard)
                     print("First Class - Starting at: £" +flight2first)
                     
+                    flightsearchagain()
+                    
                 elif flight3ukcode == searchuk and flight3oscode == searchos:
                     
                     print("FROM:")
@@ -1700,6 +1746,8 @@ def searchflights():
                     print("")
                     print("Economy Class - Starting at: £" +flight3standard)
                     print("First Class - Starting at: £" +flight3first)
+                    
+                    flightsearchagain()
                     
                 else:
                     
@@ -1719,6 +1767,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight1standard)
                     print("First Class - Starting at: £" +flight1first)
                     
+                    flightsearchagain()
+                    
                 elif flight2ukcode == searchuk and flight2oscode == searchos:
                     
                     print("FROM:")
@@ -1731,6 +1781,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight2standard)
                     print("First Class - Starting at: £" +flight2first)
                     
+                    flightsearchagain()
+                    
                 elif flight3ukcode == searchuk and flight3oscode == searchos:
                     
                     print("FROM:")
@@ -1742,6 +1794,8 @@ def searchflights():
                     print("")
                     print("Economy Class - Starting at: £" +flight3standard)
                     print("First Class - Starting at: £" +flight3first)
+                    
+                    flightsearchagain()
                     
                 else:
                     
@@ -1761,6 +1815,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight1standard)
                     print("First Class - Starting at: £" +flight1first)
                     
+                    flightsearchagain()
+                    
                 elif flight2ukcode == searchuk and flight2oscode == searchos:
                     
                     print("FROM:")
@@ -1773,6 +1829,8 @@ def searchflights():
                     print("Economy Class - Starting at: £" +flight2standard)
                     print("First Class - Starting at: £" +flight2first)
                     
+                    flightsearchagain()
+                    
                 elif flight3ukcode == searchuk and flight3oscode == searchos:
                     
                     print("FROM:")
@@ -1784,6 +1842,8 @@ def searchflights():
                     print("")
                     print("Economy Class - Starting at: £" +flight3standard)
                     print("First Class - Starting at: £" +flight3first)
+                    
+                    flightsearchagain()
                     
                 else:
                     
@@ -1807,6 +1867,33 @@ def flightsearchno():
     print("")
     
     mainmenuuser()
+
+def flightsearchagain():
+    
+    print("")
+    checksearchagain=input("Would you like to do another search? (y/n) ")
+    print("")
+    
+    if checksearchagain == 'y' or checksearchagain == 'Y':
+        
+        searchuk = ''
+        searchos = ''
+        
+        searchflights()
+        
+    elif checksearchagain == 'n' or checksearchagain == 'N':
+        
+        print("Returning you back to the main menu...")
+        print("")
+        
+        mainmenuuser()
+        
+    else:
+        
+        print("Invalid Input! Please try again...")
+        print("")
+        
+        flightsearchagain()
     
 #==============================================================================================
         
