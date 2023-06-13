@@ -59,4 +59,4 @@
 #
 # NOTE 1 - These new/upcoming features may not work as intended until the segments have been announced as complete (Sections will be developed and released individually. Smaller untilted updates will be released now and again)
 #
-# NOTE 2 - This file us updated when a new feature is added
+# NOTE 2 - This file is updated when a new feature is added
