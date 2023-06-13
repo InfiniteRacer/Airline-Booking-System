@@ -223,7 +223,8 @@ def start():
         
         print("Enter '1' to go to the Airline Portal")
         print("Enter '2' to go to the Customer Portal")
-        print("Enter '3' to Quit (Final)")
+        print("Enter '3' to enter 'DANGER ZONE'")
+        print("Enter '4' to Quit (Final)")
         
         print("")
         
@@ -240,6 +241,10 @@ def start():
             mainmenuuser()
             
         elif menuchoice == '3':
+            
+            dangerzone()
+            
+        elif menuchoice == '4':
             
             print("Program has ended! Your data has also been cleared automatically.")
             
@@ -277,9 +282,8 @@ def mainmenu():
     print("Enter '3' To Enter Price Plan And Calculate Profit")
     print("Enter '4' To Clear Data")
     print("Enter '5' To View Save Slots")
-    print("Enter '6' To Clear File Database")
-    print("Enter '7' To Change Portal Type (Staff/User)")
-    print("Enter '8' To Quit")
+    print("Enter '6' To Change Portal Type (Staff/User)")
+    print("Enter '7' To Quit")
     
     print("")
     
@@ -312,13 +316,9 @@ def mainmenuchoices():
         
     elif menuuser == '6':
         
-        fileclear()
-        
-    elif menuuser == '7':
-        
         mainmenuchoice()
         
-    elif menuuser == '8':
+    elif menuuser == '7':
         
         quitsec()
         
@@ -1982,7 +1982,7 @@ def fileclear2():
         print("Clear stopped! Returning you back to the main menu...")
         print("")
         
-        mainmenu()
+        dangerzone()
         
     else:
         
@@ -2043,7 +2043,7 @@ def fileclear3():
     print("The database file has been cleared and set back to its default! Please completely close the file and open it again for the updated version.")
     
     print("")
-    mainmenu()
+    dangerzone()
     
 #==============================================================================================
         
@@ -2090,6 +2090,56 @@ def usermanagement():
         print("")
     
     print("")
+    
+#==============================================================================================
+        
+#Danger Zone
+        
+#==============================================================================================
+    
+def dangerzone():
+    
+    def dangerzoneuserdatabase():
+        
+        print("Feature coming soon...")
+        
+        print("")
+        dangerzone()
+        
+    def dangerzoneflightdatabase():
+        
+        fileclear()
+
+    print("Enter '1' to DELETE every User Account")
+    print("Enter '2' to DELETE every Saved Flight")
+    print("Enter '3' to return to Main Menu")
+    
+    print("")
+    
+    menuchoice=input("Enter option here: ")
+    
+    print("")
+    
+    if menuchoice == '1':
+        
+        dangerzoneuserdatabase()
+        
+    elif menuchoice == '2':
+        
+        dangerzoneflightdatabase()
+        
+    elif menuchoice == '3':
+        
+        print("Retuning back to the Main Menu...")
+        
+        print("")
+        mainmenuchoice()
+        
+    else:
+        
+        print("Invalid Input. Please try again...")
+        print("")
+        dangerzone()
     
 #==============================================================================================
         
