@@ -46,7 +46,7 @@
 # - Book Flights **
 # - Cancel Flights ***
 #
-# * Sign in to pre-existing user profiles by a created file 
+# * Sign in to pre-existing user profiles by a created file 'database'
 # (To use already created profiles, you must send the pre-existing file over to the other computer)
 #
 # ** Book Flights from a new menu option AND from the search & view flight section (USER Portal)
