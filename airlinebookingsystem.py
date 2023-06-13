@@ -2073,7 +2073,21 @@ def userserver():
     
 def usermanagement():
     
-    #This Section Is For Changing User Information & Etc
+    def userchangeusername():
+        
+        print("")
+        
+    def userchangepassword():
+        
+        print("")
+        
+    def userchangename():
+        
+        print("")
+        
+    def userdelete():
+        
+        print("")
     
     print("")
     
