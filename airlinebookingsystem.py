@@ -218,6 +218,9 @@ userlastname = ''
 #====================
 global useremail
 useremail = ''
+#====================
+global userpassword
+userpassword = ''
 
 #==============================================================================================
 
@@ -2113,25 +2116,20 @@ def userserver():
         if newuseremail == 'N' or newuseremail == 'n':
             
             print("")
-            print("Email Skipped!")
-            print("Sign Up Complete!")
-            print("You can now start booking and earning points! (Points coming soon...)")
-            print("")
+            print("Email Skipped...")
             
             newusermenu()
             
         else:
             
-            print("")
-            print("Sign Up Complete!")
-            print("You can now start booking and earning points! (Points coming soon...)")
-            print("")
-            
             newusermenu()
             
     def newusermenu():
-    
+        
+        print("")
         print("Thank you for signing up " +newuserfirstname+ "!")
+        print("You can now start booking flights and earning points! (Points coming soon...)")
+        print("")
         print("Please sign in from the Main Menu!")
         print("")
         
