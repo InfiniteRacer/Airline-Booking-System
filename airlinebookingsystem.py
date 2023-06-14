@@ -238,7 +238,7 @@ def start():
             
         elif menuchoice == '2':
             
-            mainmenuuser()
+            userserver()
             
         elif menuchoice == '3':
             
@@ -2063,7 +2063,46 @@ def userserver():
         
         print("")
     
-    print("")
+    def usersigninmenu():
+    
+        print("Main Menu:")
+        
+        print("Enter '1' To Create An Account")
+        print("Enter '2' To Sign In To An Account")
+        print("Enter '3' To Go Back To Main Menu (Final)")
+        
+        print("")
+        
+        usersigninsec()
+    
+    def usersigninsec():
+    
+        menuchoice=input("Enter option here: ")
+        print("")
+        
+        if menuchoice == '1':
+            
+            usercreate()
+            
+        elif menuchoice == '2':
+            
+            usersignin()
+            
+        elif menuchoice == '3':
+            
+            print("Returining back to the main menu...")
+            
+            print("")
+            mainmenuchoice()
+            
+        else:
+            
+            print("Invalid Input! Please try again...")
+            print("")
+            
+            usersigninsec()
+            
+    usersigninmenu()
     
 #==============================================================================================
         
