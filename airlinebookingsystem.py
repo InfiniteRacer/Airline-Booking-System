@@ -347,6 +347,8 @@ def mainmenuchoices():
         
 def mainmenuuser():
     
+    print("Welcome Back, " +userfirstname+ "!")
+    print("")
     print("Main Menu:")
     
     print("Enter '1' To View Flights Available")
@@ -2106,7 +2108,7 @@ def userserver():
         newuserpassword=input("(*)Password? ")
         newuseremail=input("Email Address (Enter 'N' to skip)? ")
         
-        #Use File Handling To Store Users Information HERE
+        #Use File Handling To Store The New Users Information HERE
         
         if newuseremail == 'N' or newuseremail == 'n':
             
@@ -2126,12 +2128,32 @@ def userserver():
             print("")
             
             newusermenu()
+            
+    def newusermenu():
+    
+        print("Thank you for signing up " +newuserfirstname+ "!")
+        print("Please sign in from the Main Menu!")
+        print("")
+        
+        userserver()
         
     def usersignin():
         
-        #Use File Handling To Find Users Information HERE
+        #Use File Handling To Find & Match Pre-exsisting Users Information HERE
         
         print("Welcome Back User!")
+        print("")
+        
+        oldusername=input("Username? ")
+        
+        #if statement checking for match
+        
+        oldpassword=input("Password? ")
+        
+        #if statement checking for match
+        
+        #if correct, go to:
+        #mainmenuuser()
     
     def usersigninmenu():
     
@@ -2279,19 +2301,5 @@ def booking():
 def cancelbooking():
     
     print("")
-    
-#==============================================================================================
-        
-#New User Menu
-        
-#==============================================================================================
-    
-def newusermenu():
-    
-    print("Thank you for signing up " +newuserfirstname+ "!")
-    print("Please sign in from the Main Menu!")
-    print("")
-    
-    userserver()
     
 start()
