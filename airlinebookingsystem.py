@@ -356,9 +356,9 @@ def mainmenuuser():
     
     print("Enter '1' To View Flights Available")
     print("Enter '2' To Search Flights")
-    print("Enter '3' To Book A Flight")
-    print("Enter '4' To Manage Flights")
-    print("Enter '5' To Manage Account")
+    print("Enter '3' To Book A Flight (COMING SOON...)")
+    print("Enter '4' To Manage Flights (COMING SOON...)")
+    print("Enter '5' To Manage Account (COMING SOON...)")
     print("Enter '6' To Change Portal Type (Staff/User)")
     print("Enter '7' To Sign Out")
     print("Enter '8' To Quit")
