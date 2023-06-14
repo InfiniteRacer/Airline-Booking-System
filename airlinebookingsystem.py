@@ -2091,15 +2091,47 @@ def fileclear3():
     
 def userserver():
     
-    #Use File Handling To Store Users Information
-    
     def usercreate():
         
+        global newuserfirstname
+        
+        print("Welcome new user!")
+        print("Please follow the questions below to continue...")
+        print("(*) = REQUIRED QUESTION FOR SIGN UP TO WORK CORRECTLY")
         print("")
+        
+        newuserfirstname=input("(*)First Name? ")
+        newuserlastname=input("(*)Last Name? ")
+        newuserusername=input("(*)Username? ")
+        newuserpassword=input("(*)Password? ")
+        newuseremail=input("Email Address (Enter 'N' to skip)? ")
+        
+        #Use File Handling To Store Users Information HERE
+        
+        if newuseremail == 'N' or newuseremail == 'n':
+            
+            print("")
+            print("Email Skipped!")
+            print("Sign Up Complete!")
+            print("You can now start booking and earning points! (Points coming soon...)")
+            print("")
+            
+            newusermenu()
+            
+        else:
+            
+            print("")
+            print("Sign Up Complete!")
+            print("You can now start booking and earning points! (Points coming soon...)")
+            print("")
+            
+            newusermenu()
         
     def usersignin():
         
-        print("")
+        #Use File Handling To Find Users Information HERE
+        
+        print("Welcome Back User!")
     
     def usersigninmenu():
     
@@ -2247,5 +2279,19 @@ def booking():
 def cancelbooking():
     
     print("")
-
+    
+#==============================================================================================
+        
+#NEW User Menu (IN PROGRESS)
+        
+#==============================================================================================
+    
+def newusermenu():
+    
+    print("Thank you for signing up " +newuserfirstname+ "!")
+    print("Please sign in from the Main Menu!")
+    print("")
+    
+    userserver()
+    
 start()
