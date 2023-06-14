@@ -209,6 +209,16 @@ flight3standard = 'N/A'
 global flight3first
 flight3first = 'N/A'
 
+#Current User Information
+global userfirstname
+userfirstname = '' #Grabbing Information From File 'Database'
+#====================
+global userlastname
+userlastname = ''
+#====================
+global useremail
+useremail = ''
+
 #==============================================================================================
 
 #FIRST Start (ALL)
@@ -340,9 +350,13 @@ def mainmenuuser():
     print("Main Menu:")
     
     print("Enter '1' To View Flights Available")
-    print("Enter '2' To Search Flights (IN PROGRESS - CURRENTLY NOT WORKING)")
-    print("Enter '3' To Change Portal Type (Staff/User)")
-    print("Enter '4' To Quit")
+    print("Enter '2' To Search Flights")
+    print("Enter '3' To Book A Flight")
+    print("Enter '4' To Manage Flights")
+    print("Enter '5' To Manage Account")
+    print("Enter '6' To Change Portal Type (Staff/User)")
+    print("Enter '7' To Sign Out")
+    print("Enter '8' To Quit")
     
     print("")
     
@@ -363,9 +377,25 @@ def mainmenuuserchoices():
         
     elif menuchoice == '3':
         
-        mainmenuchoice()
+        booking()
         
     elif menuchoice == '4':
+        
+        cancelbooking()
+        
+    elif menuchoice == '5':
+        
+        usermanagement()
+        
+    elif menuchoice == '6':
+        
+        mainmenuchoice()
+        
+    elif menuchoice == '7':
+        
+        signout()
+        
+    elif menuchoice == '8':
         
         quitsecuser()
         
@@ -770,11 +800,19 @@ def priceplan():
             
             print("You need to select a different aircraft! It isn't possible/unsafe to complete the route with the selected aircraft.")
             print("")
+            print("Your Aircrafts Maxiumum Range is " +planechoicerange+ "km!")
+            print("Your Selected Journey Length is " +distance+ "km!")
+            
+            print("")
             mainmenu()
             
         elif maxrange < distance:
             
             print("You need to select a different aircraft! It isn't possible to complete the route with the selected aircraft.")
+            print("")
+            print("Your Aircrafts Maxiumum Range is " +planechoicerange+ "km!")
+            print("Your Selected Journey Length is " +distance+ "km!")
+            
             print("")
             mainmenu()
             
@@ -2103,6 +2141,16 @@ def userserver():
             usersigninsec()
             
     usersigninmenu()
+    
+#==============================================================================================
+        
+#User Sign Out (IN PROGRESS)
+        
+#==============================================================================================
+    
+def signout():
+    
+    print("")
     
 #==============================================================================================
         
