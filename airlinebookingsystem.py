@@ -2202,7 +2202,32 @@ def userserver():
     
 def signout():
     
+    def signoutfinal():
+        
+        print("")
+        
+        userserver()
+    
+    checksignout=input("Are you sure you want to sign out? (y/n) ")
     print("")
+    
+    if checksignout == 'y' or checksignout == 'Y':
+        
+        signoutfinal()
+        
+    elif checksignout == 'n' or checksignout == 'N':
+        
+        print("Clear stopped! Returning you back to the main menu...")
+        print("")
+        
+        userserver()
+        
+    else:
+        
+        print("Invalid Input! Please try again...")
+        print("")
+        
+        signout()
     
 #==============================================================================================
         
@@ -2299,5 +2324,5 @@ def booking():
 def cancelbooking():
     
     print("")
-    
+
 start()
