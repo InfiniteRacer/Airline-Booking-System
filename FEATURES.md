@@ -51,6 +51,7 @@
 # - Change User Information
 # - Book Flights **
 # - Cancel Flights ***
+# - Advanced Search For Flights (Limit by Prices and Plane Type)
 #
 # * Sign in to pre-existing user profiles by a created file 'database'
 # (To use already created profiles, you must send the pre-existing file over to the other computer)
