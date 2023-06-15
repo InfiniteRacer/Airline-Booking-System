@@ -118,8 +118,10 @@ flight3standard = 'N/A'
 #====================
 flight3first = 'N/A'
 
-#Current User Information (DELETE ALL BELOW APART FROM 'USERSIGNEDIN' AFTER CODE IS FINSIHED)
+#Current User Information (DELETE ALL THAT ARENT NEEDED AFTER CODE IS FINSIHED)
 usersignedin = 'N'
+#====================
+userlist = []
 #====================
 userfirstname = ''
 #====================
@@ -2044,7 +2046,7 @@ def userserver():
         elif newuserfirstname == '':
             
             print("")
-            print("You left this question blank! Please try again...")
+            print("You left the question blank! Please try again...")
             
             print("")
             usersigninmenu()
@@ -2062,7 +2064,7 @@ def userserver():
         elif newuserlastname == '':
             
             print("")
-            print("You left this question blank! Please try again...")
+            print("You left the question blank! Please try again...")
             
             print("")
             usersigninmenu()
@@ -2080,7 +2082,7 @@ def userserver():
         elif newuserusername == '':
             
             print("")
-            print("You left this question blank! Please try again...")
+            print("You left the question blank! Please try again...")
             
             print("")
             usersigninmenu()
@@ -2098,7 +2100,7 @@ def userserver():
         elif newuserpassword == '':
             
             print("")
-            print("You left this question blank! Please try again...")
+            print("You left the question blank! Please try again...")
             
             print("")
             usersigninmenu()
@@ -2115,7 +2117,7 @@ def userserver():
         elif newuseremail == '':
             
             print("")
-            print("You left this question blank! Please try again...")
+            print("You left the question blank! Please try again...")
             
             print("")
             usersigninmenu()
