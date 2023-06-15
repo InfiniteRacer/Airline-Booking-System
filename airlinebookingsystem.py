@@ -2102,13 +2102,83 @@ def userserver():
         
         print("Welcome new user!")
         print("Please follow the questions below to continue...")
-        print("(*) = REQUIRED QUESTION FOR SIGN UP TO WORK CORRECTLY")
+        print("")
+        print("NOTE - Enter 'N' on ANY question to cancel and return to the main menu.")
+        print("(*) = REQUIRED QUESTION")
         print("")
         
         newuserfirstname=input("(*)First Name? ")
+        
+        if newuserfirstname == 'N' or newuserfirstname == 'n':
+            
+            print("")
+            print("Sign Up Canceled!")
+            
+            print("")
+            usersigninmenu()
+            
+        elif newuserfirstname == '':
+            
+            print("")
+            print("You left this question blank! Please try again...")
+            
+            print("")
+            usersigninmenu()
+        
         newuserlastname=input("(*)Last Name? ")
+        
+        if newuserlastname == 'N' or newuserlastname == 'n':
+            
+            print("")
+            print("Sign Up Canceled!")
+            
+            print("")
+            usersigninmenu()
+            
+        elif newuserlastname == '':
+            
+            print("")
+            print("You left this question blank! Please try again...")
+            
+            print("")
+            usersigninmenu()
+        
         newuserusername=input("(*)Username? ")
+        
+        if newuserusername == 'N' or newuserusername == 'n':
+            
+            print("")
+            print("Sign Up Canceled!")
+            
+            print("")
+            usersigninmenu()
+            
+        elif newuserusername == '':
+            
+            print("")
+            print("You left this question blank! Please try again...")
+            
+            print("")
+            usersigninmenu()
+        
         newuserpassword=input("(*)Password? ")
+        
+        if newuserpassword == 'N' or newuserpassword == 'n':
+            
+            print("")
+            print("Sign Up Canceled!")
+            
+            print("")
+            usersigninmenu()
+            
+        elif newuserpassword == '':
+            
+            print("")
+            print("You left this question blank! Please try again...")
+            
+            print("")
+            usersigninmenu()
+        
         newuseremail=input("Email Address (Enter 'N' to skip)? ")
         
         #Use File Handling To Store The New Users Information HERE
@@ -2118,7 +2188,16 @@ def userserver():
             print("")
             print("Email Skipped...")
             
+            print("")
             newusermenu()
+            
+        elif newuseremail == '':
+            
+            print("")
+            print("You left this question blank! Please try again...")
+            
+            print("")
+            usersigninmenu()
             
         else:
             
@@ -2141,16 +2220,51 @@ def userserver():
         
         print("Welcome Back User!")
         print("")
+        print("NOTE - Enter 'N' on ANY question to cancel and return to the main menu.")
+        print("(*) = REQUIRED QUESTION")
+        print("")
         
-        oldusername=input("Username? ")
+        oldusername=input("(*)Username? ")
         
-        #if statement checking for match
+        if oldusername == 'N' or oldusername == 'n':
+            
+            print("")
+            print("Sign In Canceled!")
+            
+            print("")
+            usersigninmenu()
+            
+        elif oldusername == '':
+            
+            print("")
+            print("You left this question blank! Please try again...")
+            
+            print("")
+            usersigninmenu()
         
-        oldpassword=input("Password? ")
+        #if statement checking for match HERE
         
-        #if statement checking for match
+        oldpassword=input("(*)Password? ")
         
-        #if correct, go to:
+        if oldpassword == 'N' or oldpassword == 'n':
+            
+            print("")
+            print("Sign In Canceled!")
+            
+            print("")
+            usersigninmenu()
+            
+        elif oldpassword == '':
+            
+            print("")
+            print("You left this question blank! Please try again...")
+            
+            print("")
+            usersigninmenu()
+        
+        #if statement checking for match HERE
+        
+        #if correct, user goes to:
         #mainmenuuser()
     
     def usersigninmenu():
