@@ -2115,6 +2115,10 @@ def userserver():
     def usercreate():
         
         global newuserfirstname
+        global newuserlastname
+        global newuserusername
+        global newuserpassword
+        global newuseremail
         
         print("Welcome new user!")
         print("Please follow the questions below to continue...")
@@ -2197,8 +2201,6 @@ def userserver():
         
         newuseremail=input("Email Address (Enter 'N' to skip)? ")
         
-        #Use File Handling To Store The New Users Information HERE
-        
         if newuseremail == 'N' or newuseremail == 'n':
             
             print("")
@@ -2220,7 +2222,30 @@ def userserver():
             
     def newusermenu():
         
-        print("")
+        userdatabase = open('userdatabase.txt', 'a+')
+        
+        userdatabase.write("User: \n")
+        userdatabase.write("\n")
+        userdatabase.write(newuserfirstname+ "\n")
+        userdatabase.write(newuserlastname+ "\n")
+        userdatabase.write(newuserusername+ "\n")
+        userdatabase.write(newuserpassword+ "\n")
+        
+        if newuseremail == 'n' or newuseremail == 'N':
+            
+            userdatabase.write("N/A")
+            print("")
+            
+        else:
+            
+            print("")
+            userdatabase.write(newuseremail)
+        
+        userdatabase.write("\n")
+        userdatabase.write("\n")
+        
+        userdatabase.close()
+        
         print("Thank you for signing up " +newuserfirstname+ "!")
         print("You can now start booking flights and earning points! (Points coming soon...)")
         print("")
