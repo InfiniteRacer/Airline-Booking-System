@@ -41,12 +41,12 @@
 #
 # - Can view saved flights
 # - Can search saved flights
+# - Create a User Profile
 #
 #----------------------------------------------------------------------
 # Upcoming Features / Being Developed:
 #----------------------------------------------------------------------
 #
-# - Create a User Profile
 # - Sign In To User Profile *
 # - Change User Information
 # - Book Flights **
