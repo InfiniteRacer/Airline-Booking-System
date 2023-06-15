@@ -210,8 +210,11 @@ global flight3first
 flight3first = 'N/A'
 
 #Current User Information
+global usersignedin
+usersignedin = 'N'
+#====================
 global userfirstname
-userfirstname = '' #Grabbing Information From File 'Database'
+userfirstname = ''
 #====================
 global userlastname
 userlastname = ''
@@ -251,7 +254,20 @@ def start():
             
         elif menuchoice == '2':
             
-            userserver()
+            if usersignedin == 'N' or usersignedin == 'n':
+            
+                userserver()
+                
+            elif usersignedin == 'Y' or usersignedin == 'y':
+                
+                mainmenuuser()
+                
+            else:
+                
+                print("There has been an error on our side! Please try again...")
+                
+                print("")
+                mainmenuchoice()
             
         elif menuchoice == '3':
             
@@ -2188,7 +2204,6 @@ def userserver():
             print("")
             print("Email Skipped...")
             
-            print("")
             newusermenu()
             
         elif newuseremail == '':
@@ -2264,8 +2279,12 @@ def userserver():
         
         #if statement checking for match HERE
         
-        #if correct, user goes to:
-        #mainmenuuser()
+        print("")
+        
+        global usersignedin
+        usersignedin = 'Y'
+        
+        mainmenuuser()
     
     def usersigninmenu():
     
@@ -2318,16 +2337,17 @@ def signout():
     
     def signoutfinal():
         
-        
         global userfirstname
         global userlastname
         global useremail
         global userpassword
+        global usersignedin
         
         userfirstname = ''
         userlastname = ''
         useremail = ''
         userpassword = ''
+        usersignedin = 'N'
         
         print("Sign Out Complete!")
         
