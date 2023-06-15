@@ -2196,7 +2196,7 @@ def userserver():
     
 #==============================================================================================
         
-#User Sign Out (IN PROGRESS)
+#User Sign Out
         
 #==============================================================================================
     
@@ -2204,8 +2204,20 @@ def signout():
     
     def signoutfinal():
         
-        print("")
         
+        global userfirstname
+        global userlastname
+        global useremail
+        global userpassword
+        
+        userfirstname = ''
+        userlastname = ''
+        useremail = ''
+        userpassword = ''
+        
+        print("Sign Out Complete!")
+        
+        print("")
         userserver()
     
     checksignout=input("Are you sure you want to sign out? (y/n) ")
@@ -2217,7 +2229,7 @@ def signout():
         
     elif checksignout == 'n' or checksignout == 'N':
         
-        print("Clear stopped! Returning you back to the main menu...")
+        print("Sign out stopped! Returning you back to the main menu...")
         print("")
         
         userserver()
