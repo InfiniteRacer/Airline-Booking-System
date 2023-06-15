@@ -1,3 +1,3 @@
 # Start at the file INFORMATION.md
 #
-# Use the files for important informarion
+# Use the various files for important informarion
