@@ -2224,14 +2224,10 @@ def userserver():
         
         userdatabase = open('userdatabase.txt', 'a+')
         
-        #Change the code so the information below saves into the same line on the txt file
-        
-        userdatabase.write("User: \n")
-        userdatabase.write("\n")
-        userdatabase.write(newuserfirstname+ "\n")
-        userdatabase.write(newuserlastname+ "\n")
-        userdatabase.write(newuserusername+ "\n")
-        userdatabase.write(newuserpassword+ "\n")
+        userdatabase.write(newuserfirstname+ ", ")
+        userdatabase.write(newuserlastname+ ", ")
+        userdatabase.write(newuserusername+ ", ")
+        userdatabase.write(newuserpassword+ ", ")
         
         if newuseremail == 'n' or newuseremail == 'N':
             
@@ -2243,7 +2239,6 @@ def userserver():
             print("")
             userdatabase.write(newuseremail)
         
-        userdatabase.write("\n")
         userdatabase.write("\n")
         
         userdatabase.close()
@@ -2257,6 +2252,8 @@ def userserver():
         userserver()
         
     def usersignin():
+        
+        userdatabase = open("userdatabase.txt", "r")
         
         print("Welcome Back User!")
         print("")
@@ -2308,6 +2305,8 @@ def userserver():
         
         global usersignedin
         usersignedin = 'Y'
+        
+        userdatabase.close()
         
         mainmenuuser()
     
