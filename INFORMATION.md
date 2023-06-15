@@ -5,9 +5,3 @@
 #
 # Check the other text files (.md) for various pieces of information
 # (Features, Valid UK & OS Codes, etc.)
-#
-# COMPULSORY FILES FOR A FULLY WORKING CODE:
-#
-# - *Currently None*
-#
-# Note - Check here regulary for required files
