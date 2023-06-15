@@ -2224,6 +2224,8 @@ def userserver():
         
         userdatabase = open('userdatabase.txt', 'a+')
         
+        #Change the code so the information below saves into the same line on the txt file
+        
         userdatabase.write("User: \n")
         userdatabase.write("\n")
         userdatabase.write(newuserfirstname+ "\n")
@@ -2255,8 +2257,6 @@ def userserver():
         userserver()
         
     def usersignin():
-        
-        #Use File Handling To Find & Match Pre-exsisting Users Information HERE
         
         print("Welcome Back User!")
         print("")
