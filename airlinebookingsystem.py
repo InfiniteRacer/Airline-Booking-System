@@ -69,160 +69,64 @@ overseasairport5codelwr = 'cai'
 overseasairport5lpl = '3779'
 overseasairport5boh = '3584'
 
-#User Inputs
-global ukairportchoice
-ukairportchoice = ''
-#====================
-global ukairportchoicecode
-ukairportchoicecode = ''
-#====================
-global overseasairportchoice
-overseasairportchoice = ''
-#====================
-global overseasairportchoicecode
-overseasairportchoicecode = ''
-#====================
-global distance
-distance = ''
-#====================
-global planechoice
-planechoice = ''
-#====================
-global planechoicerun
-planechoicerun = ''
-#====================
-global planechoicerange
-planechoicerange = ''
-#====================
-global planechoicecap
-planechoicecap = ''
-#====================
-global planechoiceminfirst
-planechoiceminfirst = ''
-#====================
-global maxrange
-maxrange = ''
-#====================
-global runcost
-runcost = ''
-#====================
-global capallstandard
-capallstandard = ''
-#====================
-global firstclassseasts
-firstclassseats = ''
-#====================
-global firstclassseastsmax
-firstclassseatsmax = ''
-#====================
-global standadseatsnumb
-standardseatsnumb = ''
-#====================
-global pricestandard
-pricestandard = ''
-#====================
-global pricefirst
-pricefirst = ''
-#====================
-global flightcostperseat
-flightcostperseat = ''
-#====================
-global flightcost
-flightcost = ''
-#====================
-global flightincome
-flightincome = ''
-#====================
-global flightprofit
-flightprofit = ''
-
 #Saved Flight Database
-global flight1
 flight1 = 'No Flight Scheduled.'
 #====================
-global flight1uk
 flight1uk = 'N/A'
 #====================
-global flight1ukcode
 flight1ukcode = 'N/A'
 #====================
-global flight1os
 flight1os = 'N/A'
 #====================
-global flight1oscode
 flight1oscode = 'N/A'
 #====================
-global flight1planechoice
 flight1planechoice = 'N/A'
 #====================
-global flight1standard
 flight1standard = 'N/A'
 #====================
-global flight1first
 flight1first = 'N/A'
 #====================
-global flight2
 flight2 = 'No Flight Scheduled.'
 #====================
-global flight2uk
 flight2uk = 'N/A'
 #====================
-global flight2ukcode
 flight2ukcode = 'N/A'
 #====================
-global flight2os
 flight2os = 'N/A'
 #====================
-global flight2oscode
 flight2oscode = 'N/A'
 #====================
-global flight2planechoice
 flight2planechoice = 'N/A'
 #====================
-global flight2standard
 flight2standard = 'N/A'
 #====================
-global flight2first
 flight2first = 'N/A'
 #====================
-global flight3
 flight3 = 'No Flight Scheduled.'
 #====================
-global flight3uk
 flight3uk = 'N/A'
 #====================
-global flight3ukcode
 flight3ukcode = 'N/A'
 #====================
-global flight3os
 flight3os = 'N/A'
 #====================
-global flight3oscode
 flight3oscode = 'N/A'
 #====================
-global flight3planechoice
 flight3planechoice = 'N/A'
 #====================
-global flight3standard
 flight3standard = 'N/A'
 #====================
-global flight3first
 flight3first = 'N/A'
 
-#Current User Information
-global usersignedin
+#Current User Information (DELETE ALL BELOW APART FROM 'USERSIGNEDIN' AFTER CODE IS FINSIHED)
 usersignedin = 'N'
 #====================
-global userfirstname
 userfirstname = ''
 #====================
-global userlastname
 userlastname = ''
 #====================
-global useremail
 useremail = ''
 #====================
-global userpassword
 userpassword = ''
 
 #==============================================================================================
