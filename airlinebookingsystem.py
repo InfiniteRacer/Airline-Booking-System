@@ -2128,6 +2128,8 @@ def userserver():
             
     def newusermenu():
         
+        global userlist
+        
         userdatabase = open('userdatabase.txt', 'a+')
         
         userdatabase.write(newuserfirstname+ ", ")
