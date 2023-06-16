@@ -143,7 +143,7 @@ def start():
     
     def mainmenuchoice():
         
-        print("Enter '1' to go to the Airline Portal")
+        print("Enter '1' to go to the Airline Portal") #Log out of user account if signed in
         print("Enter '2' to go to the Customer Portal")
         print("Enter '3' to enter 'DANGER ZONE'")
         print("Enter '4' to Quit (Final)")
@@ -204,10 +204,20 @@ def start():
     
 #==============================================================================================
 
-#Main Menu STAFF VERSION
+#Check Main Menu STAFF VERSION
 
 #==============================================================================================
     
+def mainmenucheck():
+    
+    
+    
+#==============================================================================================
+
+#Main Menu STAFF VERSION
+
+#==============================================================================================
+
 def mainmenu():
     
     print("Main Menu:")
