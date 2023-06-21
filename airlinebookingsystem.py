@@ -118,7 +118,7 @@ flight3standard = 'N/A'
 #====================
 flight3first = 'N/A'
 
-#Current User Information (DELETE ALL THAT ARENT NEEDED AFTER CODE IS FINSIHED)
+#Current User Information (DELETE ALL THAT ARENT NEEDED AFTER SECTION OF THIS CODE IS FINSIHED)
 usersignedin = 'N'
 #====================
 userlist = []
@@ -143,7 +143,7 @@ def start():
     
     def mainmenuchoice():
         
-        print("Enter '1' to go to the Airline Portal") #Log out of user account if signed in
+        print("Enter '1' to go to the Airline Portal")
         print("Enter '2' to go to the Customer Portal")
         print("Enter '3' to enter 'DANGER ZONE'")
         print("Enter '4' to Quit (Final)")
@@ -156,7 +156,7 @@ def start():
         
         if menuchoice == '1':
             
-            mainmenu()
+            mainmenucheck()
             
         elif menuchoice == '2':
             
@@ -210,7 +210,49 @@ def start():
     
 def mainmenucheck():
     
+    def mainmenuchecksec():
+        
+        global usersignedin
+        
+        print("To continue - you must be logged out of the last signed in user account.")
+        changecheck=input("Would you like to continue? (y/n) ")
+        print("")
+        
+        if changecheck == 'Y' or changecheck == 'y':
+            
+            usersignedin = 'N'
+            
+            mainmenu()
+            
+        elif changecheck == 'N' or changecheck == 'n':
+            
+            print("(You are still signed in!)")
+            print("Returning you to the main menu...")
+            print("")
+            
+            mainmenuchoice()
+        
+        else:
+            
+            print("Invalid Input! Please try again...")
+            print("")
+            
+            mainmenuchecksec()
     
+    if usersignedin == 'N' or usersignedin == 'n':
+        
+        mainmenu()
+        
+    elif usersignedin == 'Y' or usersignedin == 'y':
+        
+        mainmenuchecksec()
+        
+    else:
+        
+        print("Sorry! Something has gone wrong from our side, please try again...")
+        print("")
+        
+        mainmenuchoice()
     
 #==============================================================================================
 
