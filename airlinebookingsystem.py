@@ -146,7 +146,7 @@ def start():
         print("Enter '1' to go to the Airline Portal")
         print("Enter '2' to go to the Customer Portal")
         print("Enter '3' to enter 'DANGER ZONE'")
-        print("Enter '4' to Quit (Final)")
+        print("Enter '4' to Quit")
         
         print("")
         
@@ -181,9 +181,7 @@ def start():
             
         elif menuchoice == '4':
             
-            print("Program has ended! Your data has also been cleared automatically.")
-            
-            exit()
+            quitsecmain()
             
         else:
             
@@ -1012,6 +1010,41 @@ def quitsecuser():
         print("")
         
         quitsecuser()
+        
+    quitsec()
+    
+#==============================================================================================
+        
+#Quit Section (Main Menu)
+        
+#==============================================================================================
+    
+def quitsecmain():
+    
+    def quitsecfinal():
+    
+        print("You have ended the program! Your data has also been cleared automatically.")
+        exit()
+        
+    quituser=input("Are you sure you want to quit? (y/n) ")
+    
+    if quituser == 'y' or quituser == 'Y':
+        
+        print("")
+        quitsecfinal()
+        
+    elif quituser == 'n' or quituser == 'N':
+        
+        print("Operation stopped! Returning you back to the main menu...")
+        print("")
+        mainmenuchoice()
+        
+    else:
+        
+        print("Invalid Input! Please try again.")
+        print("")
+        
+        quitsecmain()
         
     quitsec()
     
