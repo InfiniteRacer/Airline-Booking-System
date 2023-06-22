@@ -51,12 +51,12 @@
 # - Change User Information
 # - Book Flights **
 # - Cancel Flights ***
-# - Advanced Search For Flights (Limit by Prices and Plane Type)
+# - Advanced Search For Flights (Filter by Prices and Plane Type)
 #
 # * Sign in to pre-existing user profiles by a created file 'database'
-# (To use already created profiles, you must send the pre-existing file over to the other computer)
+# (To use already created profiles, you must send the pre-existing file over to the other device)
 #
-# ** Book Flights from a new menu option AND from the search & view flight section (USER Portal)
+# ** Book Flights from a new menu option (USER Portal)
 #
 # *** Flights can be cancelled from User Management Section
 #
