@@ -131,6 +131,9 @@ useremail = ''
 #====================
 userpassword = ''
 
+#Booking Flight Process
+bookingflightnumber = '0'
+
 #==============================================================================================
 
 #FIRST Start (ALL)
@@ -1365,7 +1368,7 @@ def availflights():
     
 #==============================================================================================
         
-#Search Flights
+#Search Flights (In Progress)
         
 #==============================================================================================
 
@@ -1379,22 +1382,19 @@ def searchflights():
         searchuk=input("Departing Airport Code? ")
         searchos=input("Arrival Airport Code? ")
         
-        searchflightsadv()
+        searchflightsadvcheck()
     
-    def searchflightsadv():
+    def searchflightsadvcheck():
         
         searchadv=input("Advanced Search? (y/n) ")
         print("")
         
         if searchadv == 'y' or searchadv == 'Y':
         
-            print("Advanced Search: Feature Coming Soon!")
+            print("Advanced Search Selected!")
             print("")
             
-            print("Current Available Flights:")
-            print("")
-            
-            searchflightssec()
+            searchflightsadv()
         
         elif searchadv == 'n' or searchadv == 'N':
             
@@ -1411,9 +1411,27 @@ def searchflights():
             print("Invalid Input! Please try again...")
             print("")
             
-            searchflightsadv()
+            searchflightsadvcheck()
+            
+    def searchflightsadv():
+        
+        global advoption
+        
+        print("Enter '1' to Filter: Price")
+        print("Enter '2' to Filter: Plane Model")
+        
+        print("")
+        
+        advoption=input("Enter Option Number Here: ")
+        
+        print("Current Available Flights:")
+        print("")
+        
+        searchflightsec()
             
     def searchflightssec():
+        
+        #MAKE CODE CHECK FOR ADV SEARCH CHOSEN THEN FILTER OUT PRICES AND PLANE MODELS
         
         if searchuk == ukairport1code or searchuk == ukairport1codelwr:
             
@@ -2476,7 +2494,134 @@ def dangerzone():
     
 def booking():
     
+    def bookingview():
+    
+        print("Current Available Flights:")
+        print("")
+        
+        print("-----------------------------------------------------------")
+        print("")
+        
+        print("Flight Number #1")
+        print("")
+        
+        print("FROM:")
+        print(flight1uk+ " (" +flight1ukcode+ ")")
+        print("TO:")
+        print(flight1os+ " (" +flight1oscode+ ")")
+        print("")
+        print("Plane Model - " +flight1planechoice)
+        print("")
+        print("Economy Class - Starting at: £" +flight1standard)
+        print("First Class - Starting at: £" +flight1first)
+        
+        print("")
+        print("-----------------------------------------------------------")
+        print("")
+        
+        print("Flight Number #2")
+        print("")
+
+        
+        print("FROM:")
+        print(flight2uk+ " (" +flight2ukcode+ ")")
+        print("TO:")
+        print(flight2os+ " (" +flight2oscode+ ")")
+        print("")
+        print("Plane Model - " +flight2planechoice)
+        print("")
+        print("Economy Class - Starting at: £" +flight2standard)
+        print("First Class - Starting at: £" +flight2first)
+        
+        print("")
+        print("-----------------------------------------------------------")
+        print("")
+        
+        print("Flight Number #3")
+        print("")
+        
+        print("FROM:")
+        print(flight3uk+ " (" +flight3ukcode+ ")")
+        print("TO:")
+        print(flight3os+ " (" +flight3oscode+ ")")
+        print("")
+        print("Plane Model - " +flight3planechoice)
+        print("")
+        print("Economy Class - Starting at: £" +flight3standard)
+        print("First Class - Starting at: £" +flight3first)
+        
+        print("")
+        print("-----------------------------------------------------------")
+        print("")
+        
+        bookingsecfirst()
+        
+    def bookingsecfirst():
+        
+        print("(NOTE - Enter 'R' to display the available flights again...)")
+        print("(NOTE - Enter 'N' to cancel the booking process and return back to the main menu...)")
+        
+        bookingsec()
+        
+    def bookingsec():
+        
+        global bookingflightnumber
+        
+        bookingchoice=input("Please Enter The Flight Number Of The Flight You Wish To Book (Without The Hashtag): ")
+        print("")
+        
+        if bookingchoice == '1':
+            
+            bookingflightnumber = '1'
+            
+            bookinginfo()
+            
+        elif bookingchoice == '2':
+            
+            bookingflightnumber = '2'
+            
+            bookinginfo()
+            
+        elif bookingchoice == '3':
+            
+            bookingflightnumber = '3'
+            
+            bookinginfo()
+            
+        elif bookingchoice == 'R' or bookingchoice == 'r':
+
+            bookingview()
+            
+        elif bookingchoice == 'N' or bookingchoice == 'n':
+            
+            bookingflightnumber = '0'
+            
+            print("Process Stopped! Returning you back to the main menu...")
+            print("")
+            
+            mainmenuuser()
+            
+        else:
+            
+            print("Invalid Input! Please try again...")
+            print("")
+            
+            bookingsec()
+            
+    def bookinginfo():
+        
+        print("")
+    
+    print("Booking Portal:")
     print("")
+    
+    print("Let's see where you are flying to today, " +userfirstname+ "!")
+    print("")
+    
+    print("Available Flights:")
+    print("")
+    
+    bookingview()
     
 #==============================================================================================
         
