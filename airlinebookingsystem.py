@@ -1431,25 +1431,33 @@ def searchflights():
             
     def searchflightssec():
         
-        #MAKE CODE CHECK FOR ADV SEARCH CHOSEN THEN FILTER OUT PRICES AND PLANE MODELS
-        
         if searchuk == ukairport1code or searchuk == ukairport1codelwr:
             
             if searchos == overseasairport1code or searchos == overseasairport1codelwr:
                 
                 if flight1ukcode == searchuk and flight1oscode == searchos:
-                        
-                    print("FROM:")
-                    print(flight1uk+ " (" +flight1ukcode+ ")")
-                    print("TO:")
-                    print(flight1os+ " (" +flight1oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight1planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight1standard)
-                    print("First Class - Starting at: £" +flight1first)
                     
-                    flightsearchagain()
+                    if advoption == '1':
+                        
+                        print("") #MAKE CODE CHECK FOR ADV SEARCH CHOSEN THEN FILTER OUT PRICES AND PLANE MODELS
+                    
+                    elif advoption == '2':
+                        
+                        print("")
+                    
+                    else:
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
                     
                 elif flight2ukcode == searchuk and flight2oscode == searchos:
                     
