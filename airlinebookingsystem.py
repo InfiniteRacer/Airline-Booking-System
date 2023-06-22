@@ -1386,6 +1386,8 @@ def searchflights():
     
     def searchflightsadvcheck():
         
+        global advyn
+        
         searchadv=input("Advanced Search? (y/n) ")
         print("")
         
@@ -1393,6 +1395,8 @@ def searchflights():
         
             print("Advanced Search Selected!")
             print("")
+            
+            advyn = '1'
             
             searchflightsadv()
         
@@ -1403,6 +1407,8 @@ def searchflights():
             
             print("Current Available Flights:")
             print("")
+            
+            advyn = '2'
         
             searchflightssec()
         
@@ -1419,15 +1425,89 @@ def searchflights():
         
         print("Enter '1' to Filter: Price")
         print("Enter '2' to Filter: Plane Model")
+        print("Enter '3' to Cancel")
         
         print("")
         
         advoption=input("Enter Option Number Here: ")
+        print("")
+        
+        if advoption == '1':
+            
+            print("Enter '1' to Filter: Standard Prices")
+            print("Enter '2' to Filter: First Class Prices")
+            print("Enter '3' to Filter: ALL Classes (Coming Soon...)")
+            print("Enter '4' to Cancel")
+            print("")
+            
+            filteroption=input("Enter Option Number Here: ")
+            print("")
+            
+            if filteroption == '1':
+                
+                stanmax=input("Enter filter price for Standard Class: ")
+                
+                print("")
+                
+                filterop = '11'
+                
+            elif filteroption == '2':
+                
+                firstmax=input("Enter filter price for First Class: ")
+                
+                print("")
+                
+                filterop = '12'
+                
+            elif filteroption == '3':
+                
+                allmax=input("Enter filter price for ALL Classes: ")
+                
+                print("")
+                
+                filterop = '13'
+                
+                print("Feature Coming Soon...")
+                print("")
+                
+                mainmenuuser()
+                
+            elif filteroption == '4':
+                
+                print("Advanced Search Stopped!")
+                print("")
+                searchflightssec()
+                
+            else:
+                
+                print("Invalid Input, please try again...")
+                print("")
+                
+        elif advoption == '2':
+            
+            print("Enter '1' for ")
+            print("Enter '2' for ")
+            print("Enter '3' for ")
+            
+            #
+            
+            searchflightsadv()
+        
+        elif advoption == '3':
+            
+            print("Advanced Search Stopped!")
+            print("")
+            searchflightssec()
+        
+        else:
+            
+            print("Invalid Input, please try again...")
+            print("")
         
         print("Current Available Flights:")
         print("")
         
-        searchflightsec()
+        searchflightssec()
             
     def searchflightssec():
         
@@ -1437,11 +1517,31 @@ def searchflights():
                 
                 if flight1ukcode == searchuk and flight1oscode == searchos:
                     
-                    if advoption == '1':
+                    #MAKE CODE CHECK FOR ADV SEARCH CHOSEN THEN FILTER OUT PRICES AND PLANE MODELS
+                    
+                    if advoption == '11':
                         
-                        print("") #MAKE CODE CHECK FOR ADV SEARCH CHOSEN THEN FILTER OUT PRICES AND PLANE MODELS
+                        if flight1standard <= stanmax:
+                            
+                            #
+                            
+                        else:
+                            
+                            #
+                        
+                    elif advoption == '12':
+                        
+                        if flight1first <= firstmax:
+                            
+                            #
+                            
+                        else:
+                            
+                            #
                     
                     elif advoption == '2':
+                        
+                        #
                         
                         print("")
                     
@@ -1939,10 +2039,26 @@ def searchflights():
     
 def flightsearchno():
     
-    print("No Aircraft has been scheduled to leave from your selected airports (" +searchuk+ " & " +searchos+ ") according to our data.")
-    print("")
-    
-    mainmenuuser()
+    if advyn == '2':
+        
+        print("No Aircraft has been scheduled to leave from your selected airports (" +searchuk+ " & " +searchos+ ") according to our data.")
+        print("")
+        
+        mainmenuuser()
+        
+    elif advyn == '1':
+        
+        print("No Aircraft has been scheduled to leave from your selected airports (" +searchuk+ " & " +searchos+ ") with your selected search parameters.")
+        print("")
+        
+        mainmenuuser()
+        
+    else:
+        
+        print("Sorry! Something has gone wrong from our side, please try again...")
+        print("")
+        
+        mainmenuuser()
 
 def flightsearchagain():
     
