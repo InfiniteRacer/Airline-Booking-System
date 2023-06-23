@@ -69,22 +69,22 @@ overseasairport5codelwr = 'cai'
 overseasairport5lpl = '3779'
 overseasairport5boh = '3584'
 
-#Saved Flight Database
+#Saved Flight Database (INFO HAS BEEN CHANGED FOR TESTING, CHANGE BACK WHEN TESTING IS COMPLETE)
 flight1 = 'No Flight Scheduled.'
 #====================
 flight1uk = 'N/A'
 #====================
-flight1ukcode = 'N/A'
+flight1ukcode = 'LPL' #'N/A'
 #====================
 flight1os = 'N/A'
 #====================
-flight1oscode = 'N/A'
+flight1oscode = 'JFK' #'N/A'
 #====================
-flight1planechoice = 'N/A'
+flight1planechoice = plane3 #'N/A'
 #====================
-flight1standard = 'N/A'
+flight1standard = '400' #'N/A'
 #====================
-flight1first = 'N/A'
+flight1first = '600' #'N/A'
 #====================
 flight2 = 'No Flight Scheduled.'
 #====================
@@ -1422,6 +1422,7 @@ def searchflights():
     def searchflightsadv():
         
         global advoption
+        global filterop
         
         print("Enter '1' to Filter: Price")
         print("Enter '2' to Filter: Plane Model")
@@ -1436,8 +1437,7 @@ def searchflights():
             
             print("Enter '1' to Filter: Standard Prices")
             print("Enter '2' to Filter: First Class Prices")
-            print("Enter '3' to Filter: ALL Classes (Coming Soon...)")
-            print("Enter '4' to Cancel")
+            print("Enter '3' to Cancel")
             print("")
             
             filteroption=input("Enter Option Number Here: ")
@@ -1459,19 +1459,6 @@ def searchflights():
                 
                 filterop = '12'
                 
-            elif filteroption == '3':
-                
-                allmax=input("Enter filter price for ALL Classes: ")
-                
-                print("")
-                
-                filterop = '13'
-                
-                print("Feature Coming Soon...")
-                print("")
-                
-                mainmenuuser()
-                
             elif filteroption == '4':
                 
                 print("Advanced Search Stopped!")
@@ -1483,15 +1470,58 @@ def searchflights():
                 print("Invalid Input, please try again...")
                 print("")
                 
+                searchflightsadv()
+                
         elif advoption == '2':
             
-            print("Enter '1' for ")
-            print("Enter '2' for ")
-            print("Enter '3' for ")
+            print("Enter '1' for: " +plane1)
+            print("Enter '2' for: " +plane2)
+            print("Enter '3' for: " +plane3)
+            print("Enter '4' to Cancel")
+            print("")
             
-            #
+            filteroptionplane=input("Enter Option Number Here: ")
+            print("")
             
-            searchflightsadv()
+            if filteroptionplane == '1':
+                
+                filterop = '21'
+                filterplane = plane1
+                
+                print("Current Available Flights:")
+                print("")
+        
+                searchflightssec()
+            
+            elif filteroptionplane == '2':
+                
+                filterop = '21'
+                filterplane = plane2
+                
+                print("Current Available Flights:")
+                print("")
+        
+                searchflightssec()
+            
+            elif filteroptionplane == '3':
+                
+                filterop = '21'
+                filterplane = plane3
+                
+                print("Current Available Flights:")
+        
+                searchflightssec()
+            
+            elif filteroptionplane == '4':
+                
+                print("Advanced Search Stopped!")
+                searchflightssec()
+            
+            else:
+                
+                print("Invalid Input, please try again...")
+                
+                searchflightsadv()
         
         elif advoption == '3':
             
@@ -1517,36 +1547,46 @@ def searchflights():
                 
                 if flight1ukcode == searchuk and flight1oscode == searchos:
                     
-                    #MAKE CODE CHECK FOR ADV SEARCH CHOSEN THEN FILTER OUT PRICES AND PLANE MODELS
+                    if advyn == '1':
+                        
+                        print('PASSED THROUGH') #delete
+                        print("") #delete
                     
-                    if advoption == '11':
-                        
-                        if flight1standard <= stanmax:
+                        if advoption == '11':
                             
-                            #
+                            print('PASSED THROUGH AGAIN AGAIN') #delete
+                            print("") #delete
+                                
+                            if flight1standard > stanmax:
+                                
+                                flightsearchno()
+                                
+                            print('PASSED THROUGH AGAIN AGAIN AGAIN') #delete
+                            print("") #delete
                             
-                        else:
+                        elif advoption == '12':
                             
-                            #
+                            if flight1standard > stanmax:
+                                
+                                flightsearchno()
                         
-                    elif advoption == '12':
-                        
-                        if flight1first <= firstmax:
+                        elif advoption == '21':
                             
-                            #
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                                
+                        print('PASSED THROUGH AGAIN') #delete
+                        print("") #delete
+                        
+                        print(advyn) #delete
+                        print(advoption) #delete
+                        print("") #delete
                             
-                        else:
-                            
-                            #
-                    
-                    elif advoption == '2':
-                        
-                        #
-                        
-                        print("")
-                    
-                    else:
-                        
                         print("FROM:")
                         print(flight1uk+ " (" +flight1ukcode+ ")")
                         print("TO:")
@@ -1559,8 +1599,29 @@ def searchflights():
                         
                         flightsearchagain()
                     
-                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
+                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                        
                     print("FROM:")
                     print(flight2uk+ " (" +flight2ukcode+ ")")
                     print("TO:")
