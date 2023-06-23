@@ -1423,6 +1423,9 @@ def searchflights():
         
         global advoption
         global filterop
+        global stanmax
+        global firstmax
+        global filterplane
         
         print("Enter '1' to Filter: Price")
         print("Enter '2' to Filter: Plane Model")
@@ -1430,10 +1433,10 @@ def searchflights():
         
         print("")
         
-        advoption=input("Enter Option Number Here: ")
+        advchoice=input("Enter Option Number Here: ")
         print("")
         
-        if advoption == '1':
+        if advchoice == '1':
             
             print("Enter '1' to Filter: Standard Prices")
             print("Enter '2' to Filter: First Class Prices")
@@ -1449,7 +1452,7 @@ def searchflights():
                 
                 print("")
                 
-                filterop = '11'
+                advoption = '11'
                 
             elif filteroption == '2':
                 
@@ -1457,7 +1460,7 @@ def searchflights():
                 
                 print("")
                 
-                filterop = '12'
+                advoption = '12'
                 
             elif filteroption == '4':
                 
@@ -1472,7 +1475,7 @@ def searchflights():
                 
                 searchflightsadv()
                 
-        elif advoption == '2':
+        elif advchoice == '2':
             
             print("Enter '1' for: " +plane1)
             print("Enter '2' for: " +plane2)
@@ -1485,7 +1488,7 @@ def searchflights():
             
             if filteroptionplane == '1':
                 
-                filterop = '21'
+                advoption = '21'
                 filterplane = plane1
                 
                 print("Current Available Flights:")
@@ -1495,7 +1498,7 @@ def searchflights():
             
             elif filteroptionplane == '2':
                 
-                filterop = '21'
+                advoption = '21'
                 filterplane = plane2
                 
                 print("Current Available Flights:")
@@ -1505,7 +1508,7 @@ def searchflights():
             
             elif filteroptionplane == '3':
                 
-                filterop = '21'
+                advoption = '21'
                 filterplane = plane3
                 
                 print("Current Available Flights:")
@@ -1523,7 +1526,7 @@ def searchflights():
                 
                 searchflightsadv()
         
-        elif advoption == '3':
+        elif advchoice == '3':
             
             print("Advanced Search Stopped!")
             print("")
@@ -1559,10 +1562,10 @@ def searchflights():
                                 
                             if flight1standard > stanmax:
                                 
-                                flightsearchno()
+                                print('PASSED THROUGH AGAIN AGAIN AGAIN') #delete
+                                print("") #delete
                                 
-                            print('PASSED THROUGH AGAIN AGAIN AGAIN') #delete
-                            print("") #delete
+                                flightsearchno()
                             
                         elif advoption == '12':
                             
