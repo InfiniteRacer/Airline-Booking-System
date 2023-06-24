@@ -41,6 +41,7 @@
 #
 # - Can view saved flights
 # - Can search saved flights
+# - Advanced Search For Flights (Filter by Prices and Plane Type)
 # - Create a User Profile
 #
 #----------------------------------------------------------------------
@@ -51,7 +52,6 @@
 # - Change User Information
 # - Book Flights **
 # - Cancel Flights ***
-# - Advanced Search For Flights (Filter by Prices and Plane Type)
 #
 # * Sign in to pre-existing user profiles by a created file 'database'
 # (To use already created profiles, you must send the pre-existing file over to the other device)
