@@ -143,9 +143,6 @@ useremail = ''
 #====================
 userpassword = ''
 
-#Booking Flight Process
-bookingflightnumber = '0'
-
 #==============================================================================================
 
 #FIRST Start (ALL)
@@ -4059,8 +4056,52 @@ def usermanagement():
     def userdelete():
         
         print("")
-    
-    print("")
+        
+    def menuchoicesshow():
+
+        print("Enter '1' To Change Your Username")
+        print("Enter '2' To Reset Your Password")
+        print("Enter '3' To Change Your Name")
+        print("Enter '4' To Delete Your Account")
+        print("Enter '5' To Cancel (Final)")
+        
+        print("")
+        
+        menuchoices()
+        
+    def menuchoices():
+        
+        menuinput=input("Enter option here: ")
+        print("")
+        
+        if menuinput == '1':
+            
+            userchangeusername()
+            
+        elif menuinput == '2':
+            
+            userchangepassword()
+            
+        elif menuinput == '3':
+            
+            userchangename()
+            
+        elif menuinput == '4':
+            
+            userdelete()
+            
+        elif menuinput == '5':
+            
+            mainmenuuser()
+            
+        else:
+            
+            print("Invalid Input! Please Try Again!")
+            print("")
+            
+            menuchoices()
+        
+    menuchoicesshow()
     
 #==============================================================================================
         
@@ -4119,6 +4160,8 @@ def dangerzone():
 #==============================================================================================
     
 def booking():
+    
+    bookingflightnumber = '0'
     
     def bookingview():
     
@@ -4257,6 +4300,16 @@ def booking():
     
 def cancelbooking():
     
+    def cancelbookingview():
+        
+        print("")
+    
+    print("Cancel Booking Portal:")
     print("")
+    
+    print("Available Flights:")
+    print("")
+    
+    cancelbookingview()
 
 start()
