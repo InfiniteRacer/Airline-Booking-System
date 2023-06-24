@@ -2452,7 +2452,7 @@ def userserver():
         
     def usersignin():
         
-        userdatabase = open("userdatabase.txt", "r")
+        userdatabase = open("userdatabase.txt", "w")
         
         print("Welcome Back User!")
         print("")
