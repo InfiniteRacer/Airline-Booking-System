@@ -1551,25 +1551,16 @@ def searchflights():
                 if flight1ukcode == searchuk and flight1oscode == searchos:
                     
                     if advyn == '1':
-                        
-                        print('PASSED THROUGH') #delete
-                        print("") #delete
                     
                         if advoption == '11':
-                            
-                            print('PASSED THROUGH AGAIN AGAIN') #delete
-                            print("") #delete
                                 
-                            if flight1standard > stanmax:
-                                
-                                print('PASSED THROUGH AGAIN AGAIN AGAIN') #delete
-                                print("") #delete
+                            if flight1standard < stanmax:
                                 
                                 flightsearchno()
                             
                         elif advoption == '12':
                             
-                            if flight1standard > stanmax:
+                            if flight1first < firstmax:
                                 
                                 flightsearchno()
                         
@@ -1582,13 +1573,6 @@ def searchflights():
                             else:
                                 
                                 flightsearchno()
-                                
-                        print('PASSED THROUGH AGAIN') #delete
-                        print("") #delete
-                        
-                        print(advyn) #delete
-                        print(advoption) #delete
-                        print("") #delete
                             
                         print("FROM:")
                         print(flight1uk+ " (" +flight1ukcode+ ")")
@@ -1598,7 +1582,7 @@ def searchflights():
                         print("Plane Model - " +flight1planechoice)
                         print("")
                         print("Economy Class - Starting at: £" +flight1standard)
-                        print("First Class - Starting at: £" +flight1first)
+                        print("First Class - Starting at: £" +flight1first) 
                         
                         flightsearchagain()
                     
