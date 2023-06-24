@@ -69,22 +69,26 @@ overseasairport5codelwr = 'cai'
 overseasairport5lpl = '3779'
 overseasairport5boh = '3584'
 
-#Saved Flight Database (INFO HAS BEEN CHANGED FOR TESTING, CHANGE BACK WHEN TESTING IS COMPLETE)
+#Saved Flight Database
 flight1 = 'No Flight Scheduled.'
 #====================
 flight1uk = 'N/A'
 #====================
-flight1ukcode = 'LPL' #'N/A'
+flight1ukcode = 'N/A'
+#====================
+flight1ukcodelwr = 'N/A'
 #====================
 flight1os = 'N/A'
 #====================
-flight1oscode = 'JFK' #'N/A'
+flight1oscode = 'N/A'
 #====================
-flight1planechoice = plane3 #'N/A'
+flight1oscodelwr = 'N/A'
 #====================
-flight1standard = '400' #'N/A'
+flight1planechoice = 'N/A'
 #====================
-flight1first = '600' #'N/A'
+flight1standard = 'N/A'
+#====================
+flight1first = 'N/A'
 #====================
 flight2 = 'No Flight Scheduled.'
 #====================
@@ -92,9 +96,13 @@ flight2uk = 'N/A'
 #====================
 flight2ukcode = 'N/A'
 #====================
+flight2ukcodelwr = 'N/A'
+#====================
 flight2os = 'N/A'
 #====================
 flight2oscode = 'N/A'
+#====================
+flight2oscodelwr = 'N/A'
 #====================
 flight2planechoice = 'N/A'
 #====================
@@ -108,9 +116,13 @@ flight3uk = 'N/A'
 #====================
 flight3ukcode = 'N/A'
 #====================
+flight3ukcodelwr = 'N/A'
+#====================
 flight3os = 'N/A'
 #====================
 flight3oscode = 'N/A'
+#====================
+flight3oscodelwr = 'N/A'
 #====================
 flight3planechoice = 'N/A'
 #====================
@@ -1113,8 +1125,10 @@ def saveflight():
             global flight1
             global flight1uk
             global flight1ukcode
+            global flight1ukcodelwr
             global flight1os
             global flight1oscode
+            global flight1oscodelwr
             global flight1planechoice
             global flight1standard
             global flight1first
@@ -1125,9 +1139,51 @@ def saveflight():
             
             flight1ukcode=ukairportchoicecode
             
+            if ukairportchoicecode == ukairport1code:
+                
+                flight1ukcodelwr=ukairport1codelwr
+                
+            elif ukairportchoicecode == ukairport2code:
+                
+                flight1ukcodelwr=ukairport2codelwr
+                
+            else:
+                
+                print("Sorry! Something has gone wrong from our side, please try again...")
+                print("")
+                
+                mainmenu()
+            
             flight1os=overseasairportchoice
             
             flight1oscode=overseasairportchoicecode
+            
+            if overseasairportchoicecode == overseasairport1code:
+                
+                flight1oscodelwr=overseasairport1codelwr
+                
+            elif overseasairportchoicecode == overseasairport2code:
+                
+                flight1oscodelwr=overseasairport2codelwr
+                
+            elif overseasairportchoicecode == overseasairport3code:
+                
+                flight1oscodelwr=overseasairport3codelwr
+                
+            elif overseasairportchoicecode == overseasairport4code:
+                
+                flight1oscodelwr=overseasairport4codelwr
+                
+            elif overseasairportchoicecode == overseasairport5code:
+                
+                flight1oscodelwr=overseasairport5codelwr
+                
+            else:
+                
+                print("Sorry! Something has gone wrong from our side, please try again...")
+                print("")
+                
+                mainmenu()
             
             flight1planechoice=planechoice
             
@@ -1183,8 +1239,10 @@ def saveflight():
             global flight2
             global flight2uk
             global flight2ukcode
+            global flight2ukcodelwr
             global flight2os
             global flight2oscode
+            global flight2oscodelwr
             global flight2planechoice
             global flight2standard
             global flight2first
@@ -1195,9 +1253,51 @@ def saveflight():
     
             flight2ukcode=ukairportchoicecode
             
+            if ukairportchoicecode == ukairport1code:
+                
+                flight2ukcodelwr=ukairport1codelwr
+                
+            elif ukairportchoicecode == ukairport2code:
+                
+                flight2ukcodelwr=ukairport2codelwr
+                
+            else:
+                
+                print("Sorry! Something has gone wrong from our side, please try again...")
+                print("")
+                
+                mainmenu()
+            
             flight2os=overseasairportchoice
             
             flight2oscode=overseasairportchoicecode
+            
+            if overseasairportchoicecode == overseasairport1code:
+                
+                flight2oscodelwr=overseasairport1codelwr
+                
+            elif overseasairportchoicecode == overseasairport2code:
+                
+                flight2oscodelwr=overseasairport2codelwr
+                
+            elif overseasairportchoicecode == overseasairport3code:
+                
+                flight2oscodelwr=overseasairport3codelwr
+                
+            elif overseasairportchoicecode == overseasairport4code:
+                
+                flight2oscodelwr=overseasairport4codelwr
+                
+            elif overseasairportchoicecode == overseasairport5code:
+                
+                flight2oscodelwr=overseasairport5codelwr
+                
+            else:
+                
+                print("Sorry! Something has gone wrong from our side, please try again...")
+                print("")
+                
+                mainmenu()
             
             flight2planechoice=planechoice
             
@@ -1253,8 +1353,10 @@ def saveflight():
             global flight3
             global flight3uk
             global flight3ukcode
+            global flight3ukcodelwr
             global flight3os
             global flight3oscode
+            global flight3oscodelwr
             global flight3planechoice
             global flight3standard
             global flight3first
@@ -1265,9 +1367,51 @@ def saveflight():
         
             flight3ukcode=ukairportchoicecode
             
+            if ukairportchoicecode == ukairport1code:
+                
+                flight3ukcodelwr=ukairport1codelwr
+                
+            elif ukairportchoicecode == ukairport2code:
+                
+                flight3ukcodelwr=ukairport2codelwr
+                
+            else:
+                
+                print("Sorry! Something has gone wrong from our side, please try again...")
+                print("")
+                
+                mainmenu()
+            
             flight3os=overseasairportchoice
             
             flight3oscode=overseasairportchoicecode
+            
+            if overseasairportchoicecode == overseasairport1code:
+                
+                flight3oscodelwr=overseasairport1codelwr
+                
+            elif overseasairportchoicecode == overseasairport2code:
+                
+                flight3oscodelwr=overseasairport2codelwr
+                
+            elif overseasairportchoicecode == overseasairport3code:
+                
+                flight3oscodelwr=overseasairport3codelwr
+                
+            elif overseasairportchoicecode == overseasairport4code:
+                
+                flight3oscodelwr=overseasairport4codelwr
+                
+            elif overseasairportchoicecode == overseasairport5code:
+                
+                flight3oscodelwr=overseasairport5codelwr
+                
+            else:
+                
+                print("Sorry! Something has gone wrong from our side, please try again...")
+                print("")
+                
+                mainmenu()
         
             flight3planechoice=planechoice
             
@@ -1298,7 +1442,7 @@ def saveflight():
         
 #==============================================================================================
         
-#View Save Flights & Available Flights
+#View Saved Flights & Available Flights
         
 #==============================================================================================
         
@@ -1368,7 +1512,7 @@ def availflights():
     
 #==============================================================================================
         
-#Search Flights (In Progress)
+#Search Flights
         
 #==============================================================================================
 
@@ -1545,10 +1689,10 @@ def searchflights():
     def searchflightssec():
         
         if searchuk == ukairport1code or searchuk == ukairport1codelwr:
-            
+
             if searchos == overseasairport1code or searchos == overseasairport1codelwr:
                 
-                if flight1ukcode == searchuk and flight1oscode == searchos:
+                if flight1ukcode == searchuk and flight1oscode == searchos or flight1ukcodelwr == searchuk and flight1oscodelwr == searchos:
                     
                     if advyn == '1':
                     
@@ -1607,33 +1751,123 @@ def searchflights():
                         
                         mainmenuuser()
                     
-                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                elif flight2ukcode == searchuk and flight2oscode == searchos or flight2ukcodelwr == searchuk and flight2oscodelwr == searchos:
                         
-                    print("FROM:")
-                    print(flight2uk+ " (" +flight2ukcode+ ")")
-                    print("TO:")
-                    print(flight2os+ " (" +flight2oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight2planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight2standard)
-                    print("First Class - Starting at: £" +flight2first)
+                    if advyn == '1':
                     
-                    flightsearchagain()
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                elif flight3ukcode == searchuk and flight3oscode == searchos:
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    print("FROM:")
-                    print(flight3uk+ " (" +flight3ukcode+ ")")
-                    print("TO:")
-                    print(flight3os+ " (" +flight3oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight3planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight3standard)
-                    print("First Class - Starting at: £" +flight3first)
+                elif flight3ukcode == searchuk and flight3oscode == searchos or flight3ukcodelwr == searchuk and flight3oscodelwr == searchos:
                     
-                    flightsearchagain()
+                    if advyn == '1':
+                    
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
+                    
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
                 else:
                     
@@ -1641,47 +1875,183 @@ def searchflights():
                     
             elif searchos == overseasairport2code or searchos == overseasairport2codelwr:
                 
-                if flight1ukcode == searchuk and flight1oscode == searchos:
+                if flight1ukcode == searchuk and flight1oscode == searchos or flight1ukcodelwr == searchuk and flight1oscodelwr == searchos:
                         
-                    print("FROM:")
-                    print(flight1uk+ " (" +flight1ukcode+ ")")
-                    print("TO:")
-                    print(flight1os+ " (" +flight1oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight1planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight1standard)
-                    print("First Class - Starting at: £" +flight1first)
+                    if advyn == '1':
                     
-                    flightsearchagain()
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    print("FROM:")
-                    print(flight2uk+ " (" +flight2ukcode+ ")")
-                    print("TO:")
-                    print(flight2os+ " (" +flight2oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight2planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight2standard)
-                    print("First Class - Starting at: £" +flight2first)
                     
-                    flightsearchagain()
+                elif flight2ukcode == searchuk and flight2oscode == searchos or flight2ukcodelwr == searchuk and flight2oscodelwr == searchos:
                     
-                elif flight3ukcode == searchuk and flight3oscode == searchos:
+                    if advyn == '1':
                     
-                    print("FROM:")
-                    print(flight3uk+ " (" +flight3ukcode+ ")")
-                    print("TO:")
-                    print(flight3os+ " (" +flight3oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight3planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight3standard)
-                    print("First Class - Starting at: £" +flight3first)
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                    flightsearchagain()
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
+                    
+                elif flight3ukcode == searchuk and flight3oscode == searchos or flight3ukcodelwr == searchuk and flight3oscodelwr == searchos:
+                    
+                    if advyn == '1':
+                    
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
+                    
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
                 else:
                     
@@ -1689,47 +2059,182 @@ def searchflights():
                     
             elif searchos == overseasairport3code or searchos == overseasairport3codelwr:
                 
-                if flight1ukcode == searchuk and flight1oscode == searchos:
+                if flight1ukcode == searchuk and flight1oscode == searchos or flight1ukcodelwr == searchuk and flight1oscodelwr == searchos:
                         
-                    print("FROM:")
-                    print(flight1uk+ " (" +flight1ukcode+ ")")
-                    print("TO:")
-                    print(flight1os+ " (" +flight1oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight1planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight1standard)
-                    print("First Class - Starting at: £" +flight1first)
+                    if advyn == '1':
                     
-                    flightsearchagain()
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    print("FROM:")
-                    print(flight2uk+ " (" +flight2ukcode+ ")")
-                    print("TO:")
-                    print(flight2os+ " (" +flight2oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight2planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight2standard)
-                    print("First Class - Starting at: £" +flight2first)
+                elif flight2ukcode == searchuk and flight2oscode == searchos or flight2ukcodelwr == searchuk and flight2oscodelwr == searchos:
                     
-                    flightsearchagain()
+                    if advyn == '1':
                     
-                elif flight3ukcode == searchuk and flight3oscode == searchos:
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                    print("FROM:")
-                    print(flight3uk+ " (" +flight3ukcode+ ")")
-                    print("TO:")
-                    print(flight3os+ " (" +flight3oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight3planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight3standard)
-                    print("First Class - Starting at: £" +flight3first)
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    flightsearchagain()
+                elif flight3ukcode == searchuk and flight3oscode == searchos or flight3ukcodelwr == searchuk and flight3oscodelwr == searchos:
+                    
+                    if advyn == '1':
+                    
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
+                    
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
                 else:
                     
@@ -1737,47 +2242,182 @@ def searchflights():
                     
             elif searchos == overseasairport4code or searchos == overseasairport4codelwr:
                 
-                if flight1ukcode == searchuk and flight1oscode == searchos:
+                if flight1ukcode == searchuk and flight1oscode == searchos or flight1ukcodelwr == searchuk and flight1oscodelwr == searchos:
                         
-                    print("FROM:")
-                    print(flight1uk+ " (" +flight1ukcode+ ")")
-                    print("TO:")
-                    print(flight1os+ " (" +flight1oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight1planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight1standard)
-                    print("First Class - Starting at: £" +flight1first)
+                    if advyn == '1':
                     
-                    flightsearchagain()
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    print("FROM:")
-                    print(flight2uk+ " (" +flight2ukcode+ ")")
-                    print("TO:")
-                    print(flight2os+ " (" +flight2oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight2planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight2standard)
-                    print("First Class - Starting at: £" +flight2first)
+                elif flight2ukcode == searchuk and flight2oscode == searchos or flight2ukcodelwr == searchuk and flight2oscodelwr == searchos:
                     
-                    flightsearchagain()
+                    if advyn == '1':
                     
-                elif flight3ukcode == searchuk and flight3oscode == searchos:
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                    print("FROM:")
-                    print(flight3uk+ " (" +flight3ukcode+ ")")
-                    print("TO:")
-                    print(flight3os+ " (" +flight3oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight3planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight3standard)
-                    print("First Class - Starting at: £" +flight3first)
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    flightsearchagain()
+                elif flight3ukcode == searchuk and flight3oscode == searchos or flight3ukcodelwr == searchuk and flight3oscodelwr == searchos:
+                    
+                    if advyn == '1':
+                    
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
+                    
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
                 else:
                     
@@ -1785,97 +2425,371 @@ def searchflights():
                     
             elif searchos == overseasairport5code or searchos == overseasairport5codelwr:
                 
-                if flight1ukcode == searchuk and flight1oscode == searchos:
+                if flight1ukcode == searchuk and flight1oscode == searchos or flight1ukcodelwr == searchuk and flight1oscodelwr == searchos:
                         
-                    print("FROM:")
-                    print(flight1uk+ " (" +flight1ukcode+ ")")
-                    print("TO:")
-                    print(flight1os+ " (" +flight1oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight1planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight1standard)
-                    print("First Class - Starting at: £" +flight1first)
+                    if advyn == '1':
                     
-                    flightsearchagain()
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    print("FROM:")
-                    print(flight2uk+ " (" +flight2ukcode+ ")")
-                    print("TO:")
-                    print(flight2os+ " (" +flight2oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight2planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight2standard)
-                    print("First Class - Starting at: £" +flight2first)
+                elif flight2ukcode == searchuk and flight2oscode == searchos or flight2ukcodelwr == searchuk and flight2oscodelwr == searchos:
                     
-                    flightsearchagain()
+                    if advyn == '1':
                     
-                elif flight3ukcode == searchuk and flight3oscode == searchos:
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                    print("FROM:")
-                    print(flight3uk+ " (" +flight3ukcode+ ")")
-                    print("TO:")
-                    print(flight3os+ " (" +flight3oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight3planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight3standard)
-                    print("First Class - Starting at: £" +flight3first)
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    flightsearchagain()
+                elif flight3ukcode == searchuk and flight3oscode == searchos or flight3ukcodelwr == searchuk and flight3oscodelwr == searchos:
+                    
+                    if advyn == '1':
+                    
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
+                    
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
                 else:
                     
                     flightsearchno()
+                    
+            else:
+                
+                flightsearchno()
                     
         elif searchuk == ukairport2code or searchuk == ukairport2codelwr:
             
             if searchos == overseasairport1code or searchos == overseasairport1codelwr:
                 
-                if flight1ukcode == searchuk and flight1oscode == searchos:
+                if flight1ukcode == searchuk and flight1oscode == searchos or flight1ukcodelwr == searchuk and flight1oscodelwr == searchos:
                         
-                    print("FROM:")
-                    print(flight1uk+ " (" +flight1ukcode+ ")")
-                    print("TO:")
-                    print(flight1os+ " (" +flight1oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight1planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight1standard)
-                    print("First Class - Starting at: £" +flight1first)
+                    if advyn == '1':
                     
-                    flightsearchagain()
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    print("FROM:")
-                    print(flight2uk+ " (" +flight2ukcode+ ")")
-                    print("TO:")
-                    print(flight2os+ " (" +flight2oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight2planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight2standard)
-                    print("First Class - Starting at: £" +flight2first)
+                elif flight2ukcode == searchuk and flight2oscode == searchos or flight2ukcodelwr == searchuk and flight2oscodelwr == searchos:
                     
-                    flightsearchagain()
+                    if advyn == '1':
                     
-                elif flight3ukcode == searchuk and flight3oscode == searchos:
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                    print("FROM:")
-                    print(flight3uk+ " (" +flight3ukcode+ ")")
-                    print("TO:")
-                    print(flight3os+ " (" +flight3oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight3planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight3standard)
-                    print("First Class - Starting at: £" +flight3first)
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    flightsearchagain()
+                elif flight3ukcode == searchuk and flight3oscode == searchos or flight3ukcodelwr == searchuk and flight3oscodelwr == searchos:
+                    
+                    if advyn == '1':
+                    
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
+                    
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
                 else:
                     
@@ -1883,47 +2797,182 @@ def searchflights():
                     
             elif searchos == overseasairport2code or searchos == overseasairport2codelwr:
                 
-                if flight1ukcode == searchuk and flight1oscode == searchos:
+                if flight1ukcode == searchuk and flight1oscode == searchos or flight1ukcodelwr == searchuk and flight1oscodelwr == searchos:
                         
-                    print("FROM:")
-                    print(flight1uk+ " (" +flight1ukcode+ ")")
-                    print("TO:")
-                    print(flight1os+ " (" +flight1oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight1planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight1standard)
-                    print("First Class - Starting at: £" +flight1first)
+                    if advyn == '1':
                     
-                    flightsearchagain()
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    print("FROM:")
-                    print(flight2uk+ " (" +flight2ukcode+ ")")
-                    print("TO:")
-                    print(flight2os+ " (" +flight2oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight2planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight2standard)
-                    print("First Class - Starting at: £" +flight2first)
+                elif flight2ukcode == searchuk and flight2oscode == searchos or flight2ukcodelwr == searchuk and flight2oscodelwr == searchos:
                     
-                    flightsearchagain()
+                    if advyn == '1':
                     
-                elif flight3ukcode == searchuk and flight3oscode == searchos:
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                    print("FROM:")
-                    print(flight3uk+ " (" +flight3ukcode+ ")")
-                    print("TO:")
-                    print(flight3os+ " (" +flight3oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight3planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight3standard)
-                    print("First Class - Starting at: £" +flight3first)
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    flightsearchagain()
+                elif flight3ukcode == searchuk and flight3oscode == searchos or flight3ukcodelwr == searchuk and flight3oscodelwr == searchos:
+                    
+                    if advyn == '1':
+                    
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
+                    
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
                 else:
                     
@@ -1931,47 +2980,182 @@ def searchflights():
                     
             elif searchos == overseasairport3code or searchos == overseasairport3codelwr:
                 
-                if flight1ukcode == searchuk and flight1oscode == searchos:
+                if flight1ukcode == searchuk and flight1oscode == searchos or flight1ukcodelwr == searchuk and flight1oscodelwr == searchos:
                         
-                    print("FROM:")
-                    print(flight1uk+ " (" +flight1ukcode+ ")")
-                    print("TO:")
-                    print(flight1os+ " (" +flight1oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight1planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight1standard)
-                    print("First Class - Starting at: £" +flight1first)
+                    if advyn == '1':
                     
-                    flightsearchagain()
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    print("FROM:")
-                    print(flight2uk+ " (" +flight2ukcode+ ")")
-                    print("TO:")
-                    print(flight2os+ " (" +flight2oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight2planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight2standard)
-                    print("First Class - Starting at: £" +flight2first)
+                elif flight2ukcode == searchuk and flight2oscode == searchos or flight2ukcodelwr == searchuk and flight2oscodelwr == searchos:
                     
-                    flightsearchagain()
+                    if advyn == '1':
                     
-                elif flight3ukcode == searchuk and flight3oscode == searchos:
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                    print("FROM:")
-                    print(flight3uk+ " (" +flight3ukcode+ ")")
-                    print("TO:")
-                    print(flight3os+ " (" +flight3oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight3planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight3standard)
-                    print("First Class - Starting at: £" +flight3first)
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    flightsearchagain()
+                elif flight3ukcode == searchuk and flight3oscode == searchos or flight3ukcodelwr == searchuk and flight3oscodelwr == searchos:
+                    
+                    if advyn == '1':
+                    
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
+                    
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
                 else:
                     
@@ -1979,47 +3163,182 @@ def searchflights():
                     
             elif searchos == overseasairport4code or searchos == overseasairport4codelwr:
                 
-                if flight1ukcode == searchuk and flight1oscode == searchos:
+                if flight1ukcode == searchuk and flight1oscode == searchos or flight1ukcodelwr == searchuk and flight1oscodelwr == searchos:
                         
-                    print("FROM:")
-                    print(flight1uk+ " (" +flight1ukcode+ ")")
-                    print("TO:")
-                    print(flight1os+ " (" +flight1oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight1planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight1standard)
-                    print("First Class - Starting at: £" +flight1first)
+                    if advyn == '1':
                     
-                    flightsearchagain()
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    print("FROM:")
-                    print(flight2uk+ " (" +flight2ukcode+ ")")
-                    print("TO:")
-                    print(flight2os+ " (" +flight2oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight2planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight2standard)
-                    print("First Class - Starting at: £" +flight2first)
+                elif flight2ukcode == searchuk and flight2oscode == searchos or flight2ukcodelwr == searchuk and flight2oscodelwr == searchos:
                     
-                    flightsearchagain()
+                    if advyn == '1':
                     
-                elif flight3ukcode == searchuk and flight3oscode == searchos:
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                    print("FROM:")
-                    print(flight3uk+ " (" +flight3ukcode+ ")")
-                    print("TO:")
-                    print(flight3os+ " (" +flight3oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight3planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight3standard)
-                    print("First Class - Starting at: £" +flight3first)
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    flightsearchagain()
+                elif flight3ukcode == searchuk and flight3oscode == searchos or flight3ukcodelwr == searchuk and flight3oscodelwr == searchos:
+                    
+                    if advyn == '1':
+                    
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
+                    
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
                 else:
                     
@@ -2027,47 +3346,182 @@ def searchflights():
                     
             elif searchos == overseasairport5code or searchos == overseasairport5codelwr:
                 
-                if flight1ukcode == searchuk and flight1oscode == searchos:
+                if flight1ukcode == searchuk and flight1oscode == searchos or flight1ukcodelwr == searchuk and flight1oscodelwr == searchos:
                         
-                    print("FROM:")
-                    print(flight1uk+ " (" +flight1ukcode+ ")")
-                    print("TO:")
-                    print(flight1os+ " (" +flight1oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight1planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight1standard)
-                    print("First Class - Starting at: £" +flight1first)
+                    if advyn == '1':
                     
-                    flightsearchagain()
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                elif flight2ukcode == searchuk and flight2oscode == searchos:
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    print("FROM:")
-                    print(flight2uk+ " (" +flight2ukcode+ ")")
-                    print("TO:")
-                    print(flight2os+ " (" +flight2oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight2planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight2standard)
-                    print("First Class - Starting at: £" +flight2first)
+                elif flight2ukcode == searchuk and flight2oscode == searchos or flight2ukcodelwr == searchuk and flight2oscodelwr == searchos:
                     
-                    flightsearchagain()
+                    if advyn == '1':
                     
-                elif flight3ukcode == searchuk and flight3oscode == searchos:
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
                     
-                    print("FROM:")
-                    print(flight3uk+ " (" +flight3ukcode+ ")")
-                    print("TO:")
-                    print(flight3os+ " (" +flight3oscode+ ")")
-                    print("")
-                    print("Plane Model - " +flight3planechoice)
-                    print("")
-                    print("Economy Class - Starting at: £" +flight3standard)
-                    print("First Class - Starting at: £" +flight3first)
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
-                    flightsearchagain()
+                elif flight3ukcode == searchuk and flight3oscode == searchos or flight3ukcodelwr == searchuk and flight3oscodelwr == searchos:
+                    
+                    if advyn == '1':
+                    
+                        if advoption == '11':
+                                
+                            if flight1standard < stanmax:
+                                
+                                flightsearchno()
+                            
+                        elif advoption == '12':
+                            
+                            if flight1first < firstmax:
+                                
+                                flightsearchno()
+                        
+                        elif advoption == '21':
+                            
+                            if flight1planechoice == filterplane:
+                                
+                                print("")
+                                
+                            else:
+                                
+                                flightsearchno()
+                            
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first) 
+                        
+                        flightsearchagain()
+                    
+                    elif advyn == '2':
+                        
+                        print("FROM:")
+                        print(flight1uk+ " (" +flight1ukcode+ ")")
+                        print("TO:")
+                        print(flight1os+ " (" +flight1oscode+ ")")
+                        print("")
+                        print("Plane Model - " +flight1planechoice)
+                        print("")
+                        print("Economy Class - Starting at: £" +flight1standard)
+                        print("First Class - Starting at: £" +flight1first)
+                        
+                        flightsearchagain()
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
                     
                 else:
                     
