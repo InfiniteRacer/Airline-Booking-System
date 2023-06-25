@@ -141,7 +141,7 @@ userlastname = ''
 #====================
 useremail = ''
 #====================
-userpassword = ''
+userpassword = 'a' #''
 
 #==============================================================================================
 
@@ -4043,15 +4043,241 @@ def usermanagement():
     
     def userchangeusername():
         
+        print("Enter 'N' at any point to Cancel")
         print("")
+        
+        change1=input("New Username: ")
+        
+        if change1 == 'n' or change1 == 'N':
+            
+            print("")
+            print("Username change stopped!")
+            print("")
+            
+            usermanagement()
+        
+        change2=input("Confirm Username: ")
+        print("")
+        
+        if change1 == change2:
+            
+            checkchange=input("Are you sure that you want to change your username to, " +change2+ "? (y/n) ")
+            print("")
+            
+            if checkchange == 'y' or checkchange == 'Y':
+                
+                #Line here changes users information
+            
+                print("Username change success!")
+                print("")
+                
+                usermanagement()
+                
+            elif checkchange == 'n' or checkchange == 'N':
+                
+                print("Username change stopped!")
+                print("")
+                
+                usermanagement()
+                
+        elif change2 == 'n' or change2 == 'N':
+            
+            print("Username change stopped!")
+            print("")
+            
+            usermanagement()
+                
+        else:
+            
+            print("Usernames didn't match! Please try again..")
+            print("")
+            
+            userchangeusername()
         
     def userchangepassword():
         
+        print("Enter 'N' at any point to Cancel")
         print("")
+        
+        checkgo=input("Current Password: ")
+        
+        if checkgo == userpassword:
+            
+            print("")
+            
+        elif checkgo == 'n' or checkgo == 'N':
+            
+            print("")
+            print("Password Change Cancelled!")
+            print("")
+            
+            usermanagement()
+            
+        else:
+            
+            print("")
+            print("Password is incorrect! Please try again...")
+            print("")
+            
+            userchangepassword()
+        
+        change1=input("New Password: ")
+        
+        if change1 == 'n' or change1 == 'N':
+            
+            print("")
+            print("Password change stopped!")
+            print("")
+            
+            usermanagement()
+            
+        elif change1 == userpassword:
+            
+            print("")
+            print("Sorry! Passwords cannot be the same as the previous...")
+            print("")
+            
+            usermanagement()
+        
+        change2=input("Confirm Password: ")
+        print("")
+        
+        if change2 == userpassword:
+            
+            print("Sorry! Passwords cannot be the same as the previous...")
+            print("")
+            
+            usermanagement()
+        
+        if change1 == change2:
+            
+            checkchange=input("Are you sure that you want to change your password to, " +change2+ "? (y/n) ")
+            print("")
+            
+            if checkchange == 'y' or checkchange == 'Y':
+                
+                #Line here changes users information
+            
+                print("Password change success!")
+                print("")
+                
+                usermanagement()
+                
+            elif checkchange == 'n' or checkchange == 'N':
+                
+                print("Password change stopped!")
+                print("")
+                
+                usermanagement()
+                
+        elif change2 == 'n' or change2 == 'N':
+            
+            print("Password change stopped!")
+            print("")
+            
+            usermanagement()
+                
+        else:
+            
+            print("Passwords didn't match! Please try again..")
+            print("")
+            
+            userchangepassword()
         
     def userchangename():
         
+        print("Enter 'N' at any point to Cancel")
         print("")
+        
+        change1=input("First Name: ")
+        
+        if change1 == 'n' or change1 == 'N':
+            
+            print("")
+            print("Username change stopped!")
+            print("")
+            
+            usermanagement()
+        
+        change2=input("Confirm First Name: ")
+        
+        if change1 == 'n' or change1 == 'N':
+            
+            print("")
+            print("Username change stopped!")
+            print("")
+            
+            usermanagement()
+            
+        if change1 == change2:
+            
+            print("")
+            
+        else:
+            
+            print("")
+            print("First Names do not match...")
+            print("")
+            
+            userchangename()
+            
+        change3=input("Last Name: ")
+        
+        if change3 == 'n' or change3 == 'N':
+            
+            print("")
+            print("Username change stopped!")
+            print("")
+            
+            usermanagement()
+        
+        change4=input("Confirm Last Name: ")
+        
+        if change4 == 'n' or change4 == 'N':
+            
+            print("")
+            print("Username change stopped!")
+            print("")
+            
+            usermanagement()
+            
+        if change3 == change4:
+            
+            print("")
+            
+        else:
+            
+            print("")
+            print("Last Names do not match...")
+            print("")
+            
+            userchangename()
+            
+        checkchangename=input("Are you sure that you want to change your name to, " +change2+ " " +change4+ "? (y/n) ")
+        print("")
+        
+        if checkchangename == 'y' or checkchangename == 'Y':
+            
+            #Line here changes users information
+            
+            print("Name change success!")
+            print("")
+            
+            usermanagement()
+            
+        elif checkchangename == 'n' or checkchangename == 'N':
+            
+            print("Process stopped!")
+            print("")
+            
+            usermanagement()
+            
+        else:
+            
+            print("Invalid Input! Please try again...")
+            print("")
+            
+            usermanagement()
         
     def userdelete():
         
@@ -4105,7 +4331,7 @@ def usermanagement():
     
 #==============================================================================================
         
-#Danger Zone
+#Danger Zone (In progress)
         
 #==============================================================================================
     
@@ -4113,7 +4339,7 @@ def dangerzone():
     
     def dangerzoneuserdatabase():
         
-        print("Feature coming soon...")
+        print("Feature coming soon...") #Finish
         
         print("")
         dangerzone()
