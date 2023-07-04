@@ -3850,6 +3850,8 @@ def userserver():
             
         else:
             
+            #Check for pre-exsiting email usage
+            
             newusermenu()
             
     def newusermenu():
@@ -3971,7 +3973,7 @@ def userserver():
             
         elif menuchoice == '3':
             
-            print("Returining back to the main menu...")
+            print("Returning back to the main menu...")
             
             print("")
             mainmenuchoice()
