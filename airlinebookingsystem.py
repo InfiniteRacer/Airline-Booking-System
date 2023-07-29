@@ -142,6 +142,10 @@ userlastname = ''
 useremail = ''
 #====================
 userpassword = ''
+#====================
+userpoints = '0'
+#====================
+userpointsgbp = ''
 
 #==============================================================================================
 
@@ -342,10 +346,11 @@ def mainmenuuser():
     print("Enter '2' To Search Flights")
     print("Enter '3' To Book A Flight (COMING SOON...)")
     print("Enter '4' To Manage Flights (COMING SOON...)")
-    print("Enter '5' To Manage Account (COMING SOON...)")
-    print("Enter '6' To Change Portal Type (Staff/User)")
-    print("Enter '7' To Sign Out")
-    print("Enter '8' To Quit")
+    print("Enter '5' To Manage / View Points (COMING SOON...)")
+    print("Enter '6' To Manage Account (COMING SOON...)")
+    print("Enter '7' To Change Portal Type (Staff/User)")
+    print("Enter '8' To Sign Out")
+    print("Enter '9' To Quit")
     
     print("")
     
@@ -374,17 +379,21 @@ def mainmenuuserchoices():
         
     elif menuchoice == '5':
         
-        usermanagement()
+        pointmanage()
         
     elif menuchoice == '6':
         
-        mainmenuchoice()
+        usermanagement()
         
     elif menuchoice == '7':
         
-        signout()
+        mainmenuchoice()
         
     elif menuchoice == '8':
+        
+        signout()
+        
+    elif menuchoice == '9':
         
         quitsecuser()
         
@@ -4522,6 +4531,81 @@ def booking():
     
 #==============================================================================================
         
+#User Flight Points (IN PROGRESS)
+        
+#==============================================================================================
+    
+def pointmanage():
+    
+    def pointmenu():
+    
+        pointchoicemenu=input("Please Enter Your Input: ")
+        print("")
+        
+        if pointchoicemenu == '1':
+            
+            viewpoint()
+        
+        elif pointchoicemenu == '2':
+            
+            viewpointvalue()
+        
+        elif pointchoicemenu == '3':
+            
+            pointinfo()
+            
+        elif pointchoicemenu == '4':
+            
+            backtomenu()
+        
+        else:
+            
+            print("Invalid Input! Please try again...")
+            print("")
+            
+            pointmenu()
+            
+    def viewpoint():
+        
+        print("")
+        
+    def viewpointvalue():
+        
+        print("")
+        
+    def pointinfo():
+        
+        print("Flyer Points are awarded for EVERY booked flight!")
+        print("Awarded points can be used for discounts on future flights.")
+        print("")
+        print("Points are calculated on distance:")
+        print("")
+        print("1km = 10 points")
+        print("1000 points = 5 GBP")
+        print("")
+        print("NOTE - Passengers flying FIRST CLASS are entitled to 2x amount of awarded points.")
+        print("")
+        
+    def backtomenu():
+        
+        print("")
+    
+    print("Point Manager Portal:")
+    print("")
+    
+    print("Choose what to do with your points!")
+    print("")
+    
+    print("Enter '1' To View Point Balance")
+    print("Enter '2' To View Value In An Official Currency (GBP)")
+    print("Enter '3' To Find Out More About Points")
+    print("Enter '4' To Go Back To Menu")
+    print("")
+    
+    pointmenu()
+    
+#==============================================================================================
+        
 #Cancel Booking (IN PROGRESS)
         
 #==============================================================================================
@@ -4535,7 +4619,7 @@ def cancelbooking():
     print("Cancel Booking Portal:")
     print("")
     
-    print("Available Flights:")
+    print("Booked Flights:")
     print("")
     
     cancelbookingview()
