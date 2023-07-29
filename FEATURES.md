@@ -52,6 +52,8 @@
 # - Change User Information
 # - Book Flights **
 # - Cancel Flights ***
+# - Earn Points When Booking Flights (Based off distance of flight)
+# - Use Points For Discounted Flight Prices
 #
 # * Sign in to pre-existing user profiles by a created file 'database'
 # (To use already created profiles, you must send the pre-existing file over to the other device)
