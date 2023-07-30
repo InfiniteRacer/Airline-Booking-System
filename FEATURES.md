@@ -39,10 +39,11 @@
 # User Portal:
 #----------------------------------------------------------------------
 #
+# - Create a User Profile
 # - Can view saved flights
 # - Can search saved flights
 # - Advanced Search For Flights (Filter by Prices and Plane Type)
-# - Create a User Profile
+# - Earn Points When Booking Flights (Based off distance of flight)
 #
 #----------------------------------------------------------------------
 # Upcoming Features / Being Developed:
@@ -52,7 +53,6 @@
 # - Change User Information
 # - Book Flights **
 # - Cancel Flights ***
-# - Earn Points When Booking Flights (Based off distance of flight)
 # - Use Points For Discounted Flight Prices
 #
 # * Sign in to pre-existing user profiles by a created file 'database'
