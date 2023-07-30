@@ -4514,7 +4514,120 @@ def booking():
             
     def bookinginfo():
         
+        print("(NOTE - Enter 'N' AT ANY POINT to cancel the booking process and return back to the main menu...)") #Code this in last to each IF statement
         print("")
+        
+        print("Date Options:")
+        print("")
+        
+        #Select year section
+        
+        print("1 - Jan")
+        print("2 - Feb")
+        print("3 - Mar")
+        print("4 - Apr")
+        print("5 - May")
+        print("6 - Jun")
+        print("7 - Jul")
+        print("8 - Aug")
+        print("9 - Sep")
+        print("10 - Oct")
+        print("11 - Nov")
+        print("12 - Dec")
+        print("")
+        
+        month=input("Enter Month Number: (Use chart above for reference) ")
+        
+        if month == '1':
+            
+            monthdays = 31
+            
+        elif month == '2':
+            
+            monthdays = 28
+            
+        elif month == '3':
+            
+            monthdays = 31
+            
+        elif month == '4':
+            
+            monthdays = 30
+            
+        elif month == '5':
+            
+            monthdays = 31
+            
+        elif month == '6':
+            
+            monthdays = 30
+            
+        elif month == '7':
+            
+            monthdays = 31
+            
+        elif month == '8':
+            
+            monthdays = 31
+            
+        elif month == '9':
+            
+            monthdays = 30
+            
+        elif month == '10':
+            
+            monthdays = 31
+            
+        elif month == '11':
+            
+            monthdays = 30
+            
+        elif month == '12':
+            
+            monthdays = 31
+            
+        print("NOTE - There are " +str(monthdays)+ " days in the selected month.")
+        print("")
+        
+        #Choose specific date section
+        
+        print("LOCKED* Information:")
+        print("*Locked information cannot be changed during booking - please navigate to the SETTINGS menu to change any information.")
+        print("")
+        
+        print("First Name - " +userfirstname)
+        print("Last Name - " +userlastname)
+        
+        if useremail == 'N/A':
+            
+            print("") #CODE SECTION
+            
+        elif useremail == '':
+            
+            print("Sorry! There has been an error on our side, please try again...")
+            
+        else:
+            
+            print("Email - " +useremail)
+            print("")
+            
+            checkbook=input("I can confirm that ALL of this information is CORRECT: (y/n) ")
+            print("")
+            
+            if checkbook == 'y' or checkbook == 'Y':
+                
+                print("") #CODE SECTION
+                
+            elif checkbook == 'n' or checkbook == 'N':
+                
+                print("") #CODE SECTION
+            
+            else:
+                
+                print("Invalid Input! Please try again...")
+                print("")
+                
+                booking()
     
     print("Booking Portal:")
     print("")
