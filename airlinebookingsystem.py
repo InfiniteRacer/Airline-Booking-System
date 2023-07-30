@@ -144,8 +144,6 @@ useremail = ''
 userpassword = ''
 #====================
 userpoints = '0'
-#====================
-userpointsgbp = ''
 
 #==============================================================================================
 
@@ -4300,7 +4298,7 @@ def usermanagement():
         print("Enter '2' To Reset Your Password")
         print("Enter '3' To Change Your Name")
         print("Enter '4' To Delete Your Account")
-        print("Enter '5' To Cancel (Final)")
+        print("Enter '5' To Return to Menu (Final)")
         
         print("")
         
@@ -4361,7 +4359,7 @@ def dangerzone():
 
     print("Enter '1' to DELETE every User Account")
     print("Enter '2' to DELETE every Saved Flight")
-    print("Enter '3' to return to Main Menu")
+    print("Enter '3' to Return to Main Menu")
     
     print("")
     
@@ -4531,7 +4529,7 @@ def booking():
     
 #==============================================================================================
         
-#User Flight Points (IN PROGRESS)
+#User Flight Points
         
 #==============================================================================================
     
@@ -4556,7 +4554,7 @@ def pointmanage():
             
         elif pointchoicemenu == '4':
             
-            backtomenu()
+            mainmenuuser()
         
         else:
             
@@ -4567,11 +4565,32 @@ def pointmanage():
             
     def viewpoint():
         
+        print("Point balance:")
         print("")
+        
+        print(userpoints+ " Flyer Points")
+        print("")
+        
+        pointviewgo=input("Enter anything to continue: ")
+        print("")
+        
+        pointmanage()
         
     def viewpointvalue():
         
+        print("Point balance:")
         print("")
+        
+        pointa = float(userpoints) / 1000
+        userpointsgbp = pointa * 5
+        
+        print(str(userpointsgbp)+ " Great British Pounds (GBP)")
+        print("")
+        
+        pointviewgo=input("Enter anything to continue: ")
+        print("")
+        
+        pointmanage()
         
     def pointinfo():
         
@@ -4586,9 +4605,10 @@ def pointmanage():
         print("NOTE - Passengers flying FIRST CLASS are entitled to 2x amount of awarded points.")
         print("")
         
-    def backtomenu():
-        
+        pointinfogo=input("Enter anything to continue: ")
         print("")
+        
+        pointmanage()
     
     print("Point Manager Portal:")
     print("")
@@ -4599,7 +4619,7 @@ def pointmanage():
     print("Enter '1' To View Point Balance")
     print("Enter '2' To View Value In An Official Currency (GBP)")
     print("Enter '3' To Find Out More About Points")
-    print("Enter '4' To Go Back To Menu")
+    print("Enter '4' To Return to Menu (Final)")
     print("")
     
     pointmenu()
