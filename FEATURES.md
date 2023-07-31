@@ -44,6 +44,7 @@
 # - Can search saved flights
 # - Advanced Search For Flights (Filter by Prices and Plane Type)
 # - Earn Points When Booking Flights (Based off distance of flight)
+# - Book Flights
 #
 #----------------------------------------------------------------------
 # Upcoming Features / Being Developed:
@@ -51,16 +52,10 @@
 #
 # - Sign In To User Profile *
 # - Change User Information
-# - Book Flights **
-# - Cancel Flights ***
 # - Use Points For Discounted Flight Prices
 #
 # * Sign in to pre-existing user profiles by a created file 'database'
-# (To use already created profiles, you must send the pre-existing file over to the other device)
-#
-# ** Book Flights from a new menu option (USER Portal)
-#
-# *** Flights can be cancelled from User Management Section
+# (To use already created profiles, you must send the pre-existing file 'database' over to the other device)
 #
 #----------------------------------------------------------------------
 # Note Section:
@@ -68,4 +63,4 @@
 #
 # NOTE 1 - These new/upcoming features may not work as intended until the segments have been announced as complete (Sections will be developed and released individually. Smaller untilted updates will be released now and again)
 #
-# NOTE 2 - This file is updated when a new feature is added
+# NOTE 2 - This file is updated when a new feature is added / changed / removed
