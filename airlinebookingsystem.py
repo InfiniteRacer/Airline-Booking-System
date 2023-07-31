@@ -90,6 +90,8 @@ flight1standard = 'N/A'
 #====================
 flight1first = 'N/A'
 #====================
+flight1distance = 'N/A'
+#====================
 flight2 = 'No Flight Scheduled.'
 #====================
 flight2uk = 'N/A'
@@ -110,6 +112,8 @@ flight2standard = 'N/A'
 #====================
 flight2first = 'N/A'
 #====================
+flight2distance = 'N/A'
+#====================
 flight3 = 'No Flight Scheduled.'
 #====================
 flight3uk = 'N/A'
@@ -129,8 +133,10 @@ flight3planechoice = 'N/A'
 flight3standard = 'N/A'
 #====================
 flight3first = 'N/A'
+#====================
+flight3distance = 'N/A'
 
-#Current User Information (DELETE ALL THAT ARENT NEEDED AFTER SECTION OF THIS CODE IS FINSIHED)
+#Current User Information
 usersignedin = 'N'
 #====================
 userlist = []
@@ -1163,6 +1169,8 @@ def saveflight():
             flight1oscode=overseasairportchoicecode
             
             if overseasairportchoicecode == overseasairport1code:
+                
+                if 
                 
                 flight1oscodelwr=overseasairport1codelwr
                 
@@ -4649,23 +4657,82 @@ def booking():
             
             if checkbook == 'y' or checkbook == 'Y':
                 
-                print("Information Submitted! Thank you for choosing to fly with us.")
-                print("You will recieve an email* with a link where you can select dates, pay for the trip, and more.")
+                print("Enter '1' To Select Economy Class")
+                print("Enter '2' To Select First Class*")
                 print("")
-                print("*This is to confirm that the email address is correct")
+                
+                print("*First Class seats have extra legroom, reclining beds, priority boarding and many more* features.")
+                print("**Please visit our official website for more information.")
+                print("")
+                
+                classchoice=input("Please enter your option: (1/2) ")
+                
+                if classchoice == '1':
+                    
+                    classchoicenmb = '1'
+                    
+                elif classchoice == '2':
+                    
+                    classchoicenmb = '1'
+                    
+                else:
+                    
+                    print("Invalid Input! Please try again...")
+                    print("")
+                    
+                    mainmenuuser()
+
+                print("Information & Choices Submitted! Thank you for choosing to fly with us.")
+                print("You will recieve an email confirmation to your inbox.")
                 print("")
                 
                 checkgo=input("Enter anything to continue: ")
                 print("")
                 
-                mainmenuuser()
+                print("NOTE - Your flyer points will be RETRACTED if you cancel your flight.")
+                print("")
+                
+                check2go=input("Enter anything to continue AND confirm: (Enter 'N' to cancel) ")
+                print("")
+                
+                if check2go == 'n' or check2go == 'N':
+                    
+                    print("Booking stopped!")
+                    print("")
+                    
+                    mainmenuuser()
+                    
+                else:
+                
+                    if bookingflightnumber == '1':
+                        
+                        #
+                        
+                    elif bookingflightnumber == '2':
+                        
+                        #
+                        
+                    elif bookingflightnumber == '3':
+                        
+                        #
+                        
+                    else:
+                        
+                        print("Sorry! Something has gone wrong from our side, please try again...")
+                        print("")
+                        
+                        mainmenuuser()
+                
+                    mainmenuuser()
                 
             elif checkbook == 'n' or checkbook == 'N':
                 
                 print("Please try again and fix all of the incorrect information!")
                 print("")
+                print("This can be done under 'Account Management' on the main menu.")
+                print("")
                 
-                check2go=input("Enter anything to continue: ")
+                check3go=input("Enter anything to continue: ")
                 print("")
                 
                 mainmenuuser()
