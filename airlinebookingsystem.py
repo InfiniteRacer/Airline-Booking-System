@@ -139,7 +139,7 @@ userfirstname = ''
 #====================
 userlastname = ''
 #====================
-useremail = ''
+useremail = 'Hi'
 #====================
 userpassword = ''
 #====================
@@ -4287,18 +4287,72 @@ def usermanagement():
             print("")
             
             usermanagement()
+            
+    def userchangeemail():
+        
+        print("Enter 'N' at any point to Cancel")
+        print("")
+        
+        change1=input("New Email: ")
+        
+        if change1 == 'n' or change1 == 'N':
+            
+            print("")
+            print("Email change stopped!")
+            print("")
+            
+            usermanagement()
+        
+        change2=input("Confirm Email: ")
+        print("")
+        
+        if change1 == change2:
+            
+            checkchange=input("Are you sure that you want to change your email to, " +change2+ "? (y/n) ")
+            print("")
+            
+            if checkchange == 'y' or checkchange == 'Y':
+                
+                #Line here changes users information
+            
+                print("Email change success!")
+                print("")
+                
+                usermanagement()
+                
+            elif checkchange == 'n' or checkchange == 'N':
+                
+                print("Email change stopped!")
+                print("")
+                
+                usermanagement()
+                
+        elif change2 == 'n' or change2 == 'N':
+            
+            print("Email change stopped!")
+            print("")
+            
+            usermanagement()
+                
+        else:
+            
+            print("Emails didn't match! Please try again..")
+            print("")
+            
+            userchangeemail()
         
     def userdelete():
         
-        print("")
+        print("") #Code section
         
     def menuchoicesshow():
 
         print("Enter '1' To Change Your Username")
         print("Enter '2' To Reset Your Password")
         print("Enter '3' To Change Your Name")
-        print("Enter '4' To Delete Your Account")
-        print("Enter '5' To Return to Menu (Final)")
+        print("Enter '4' To Change Your Email")
+        print("Enter '5' To Delete Your Account")
+        print("Enter '6' To Return to Menu (Final)")
         
         print("")
         
@@ -4323,9 +4377,13 @@ def usermanagement():
             
         elif menuinput == '4':
             
-            userdelete()
+            userchangeemail()
             
         elif menuinput == '5':
+            
+            userdelete()
+            
+        elif menuinput == '6':
             
             mainmenuuser()
             
@@ -4390,7 +4448,7 @@ def dangerzone():
     
 #==============================================================================================
         
-#Booking (IN PROGRESS)
+#Booking
         
 #==============================================================================================
     
@@ -4476,21 +4534,57 @@ def booking():
         
         if bookingchoice == '1':
             
-            bookingflightnumber = '1'
+            if flight1uk == 'N/A' and flight1os == 'N/A':
+                
+                print("Sorry! No flight has currently been issued to this flight slot.")
+                print("")
+                
+                checkgo=input("Enter anything to continue: ")
+                print("")
+                
+                mainmenuuser()
+                
+            else:
             
-            bookinginfo()
+                bookingflightnumber = '1'
+            
+                bookinginfo()
             
         elif bookingchoice == '2':
             
-            bookingflightnumber = '2'
+            if flight2uk == 'N/A' and flight2os == 'N/A':
+                
+                print("Sorry! No flight has currently been issued to this flight slot.")
+                print("")
+                
+                check2go=input("Enter anything to continue: ")
+                print("")
+                
+                mainmenuuser()
+                
+            else:
             
-            bookinginfo()
+                bookingflightnumber = '2'
+            
+                bookinginfo()
             
         elif bookingchoice == '3':
             
-            bookingflightnumber = '3'
+            if flight3uk == 'N/A' and flight3os == 'N/A':
+                
+                print("Sorry! No flight has currently been issued to this flight slot.")
+                print("")
+                
+                check3go=input("Enter anything to continue: ")
+                print("")
+                
+                mainmenuuser()
+                
+            else:
             
-            bookinginfo()
+                bookingflightnumber = '3'
+            
+                bookinginfo()
             
         elif bookingchoice == 'R' or bookingchoice == 'r':
 
@@ -4513,84 +4607,7 @@ def booking():
             bookingsec()
             
     def bookinginfo():
-        
-        print("(NOTE - Enter 'N' AT ANY POINT to cancel the booking process and return back to the main menu...)") #Code this in last to each IF statement
-        print("")
-        
-        print("Date Options:")
-        print("")
-        
-        #Select year section
-        
-        print("1 - Jan")
-        print("2 - Feb")
-        print("3 - Mar")
-        print("4 - Apr")
-        print("5 - May")
-        print("6 - Jun")
-        print("7 - Jul")
-        print("8 - Aug")
-        print("9 - Sep")
-        print("10 - Oct")
-        print("11 - Nov")
-        print("12 - Dec")
-        print("")
-        
-        month=input("Enter Month Number: (Use chart above for reference) ")
-        
-        if month == '1':
-            
-            monthdays = 31
-            
-        elif month == '2':
-            
-            monthdays = 28
-            
-        elif month == '3':
-            
-            monthdays = 31
-            
-        elif month == '4':
-            
-            monthdays = 30
-            
-        elif month == '5':
-            
-            monthdays = 31
-            
-        elif month == '6':
-            
-            monthdays = 30
-            
-        elif month == '7':
-            
-            monthdays = 31
-            
-        elif month == '8':
-            
-            monthdays = 31
-            
-        elif month == '9':
-            
-            monthdays = 30
-            
-        elif month == '10':
-            
-            monthdays = 31
-            
-        elif month == '11':
-            
-            monthdays = 30
-            
-        elif month == '12':
-            
-            monthdays = 31
-            
-        print("NOTE - There are " +str(monthdays)+ " days in the selected month.")
-        print("")
-        
-        #Choose specific date section
-        
+
         print("LOCKED* Information:")
         print("*Locked information cannot be changed during booking - please navigate to the SETTINGS menu to change any information.")
         print("")
@@ -4600,11 +4617,27 @@ def booking():
         
         if useremail == 'N/A':
             
-            print("") #CODE SECTION
+            print("")
+            print("Sorry! You haven't linked an email address to your account yet. (This is mandatory to book flights)")
+            print("")
+            print("This can be done under 'Account Management' on the main menu.")
+            print("")
+            
+            emailgo=input("Enter anything to continue: ")
+            print("")
+            
+            mainmenuuser()
             
         elif useremail == '':
             
+            print("")
             print("Sorry! There has been an error on our side, please try again...")
+            print("")
+            
+            email2go=input("Enter anything to continue: ")
+            print("")
+            
+            mainmenuuser()
             
         else:
             
@@ -4616,11 +4649,26 @@ def booking():
             
             if checkbook == 'y' or checkbook == 'Y':
                 
-                print("") #CODE SECTION
+                print("Information Submitted! Thank you for choosing to fly with us.")
+                print("You will recieve an email* with a link where you can select dates, pay for the trip, and more.")
+                print("")
+                print("*This is to confirm that the email address is correct")
+                print("")
+                
+                checkgo=input("Enter anything to continue: ")
+                print("")
+                
+                mainmenuuser()
                 
             elif checkbook == 'n' or checkbook == 'N':
                 
-                print("") #CODE SECTION
+                print("Please try again and fix all of the incorrect information!")
+                print("")
+                
+                check2go=input("Enter anything to continue: ")
+                print("")
+                
+                mainmenuuser()
             
             else:
                 
@@ -4736,25 +4784,5 @@ def pointmanage():
     print("")
     
     pointmenu()
-    
-#==============================================================================================
-        
-#Cancel Booking (IN PROGRESS)
-        
-#==============================================================================================
-    
-def cancelbooking():
-    
-    def cancelbookingview():
-        
-        print("")
-    
-    print("Cancel Booking Portal:")
-    print("")
-    
-    print("Booked Flights:")
-    print("")
-    
-    cancelbookingview()
 
 start()
